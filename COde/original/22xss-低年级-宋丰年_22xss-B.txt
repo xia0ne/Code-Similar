@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+	char a;
+	int ac[26]={0},i,flag=0;
+	while(1){
+		a=getchar();
+		if(a=='\n'){
+			break;
+		}
+		a-='a';
+		ac[(int)a]++;
+	}
+	while(1){
+		a=getchar();
+		if(a=='\n'){
+			break;
+		}
+		a-='a';
+		ac[(int)a]--;
+	}
+	for(i=0;i<26;i++){
+		if(ac[i]>0){
+			flag=1;
+			break;
+		}
+	}
+	if(flag==1){
+		printf("No");
+	}else{
+		printf("Yes");
+	}
+	return 0;
+}

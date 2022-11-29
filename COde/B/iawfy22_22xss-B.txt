@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int count=0;
+void BF(char a,char* b,int n){
+	int i;
+	for(i=0;i<n;i++){
+		if(a==b[i]){
+			count++;
+			b[i]=' ';
+			break;
+		}
+	}
+}
+int main()
+{
+	char a[100],b[100];
+	gets(a);
+	gets(b);
+	int sizea=strlen(a),sizeb=strlen(b),i;
+	//printf("%d  %d",sizea,sizeb);
+	for(i=0;i<sizea;i++){
+		BF(a[i],b,sizeb);
+	}
+	if(count>=sizea){
+		printf("Yes");
+	}else{
+		printf("No");
+	}
+	return 0;
+}

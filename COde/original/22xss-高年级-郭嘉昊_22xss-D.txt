@@ -1,0 +1,36 @@
+#include<iostream>
+#include<string>
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+#include<cmath>
+using std:: cin;
+using std:: cout;
+using std:: endl;
+using std:: string;
+const int maxn = 1e4+11;
+struct data{
+    int dif;
+    string name;
+}t[maxn];
+
+inline bool cmp(data s1,data s2){
+    if(s1.dif==s2.dif){
+        return s1.name<s2.name;
+    }else{
+        return s1.dif>s2.dif;
+    }
+}
+int main(){
+    int n; cin>>n;
+    for(int i=1;i<=n;i++){
+        cin>>t[i].name;
+        int x,y; cin>>x>>y;
+        t[i].dif=x*10+y;
+    }   
+    std:: sort(t+1,t+1+n,cmp);
+    for(int i=1;i<=n;i++){
+        cout<<t[i].name<<" "<<t[i].dif<<endl;
+    }
+    return 0;
+}

@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+	int num=8;
+	char A[num][num];
+	char B[num][num];
+	int i,j;
+	int c,cnt;
+	for(i=0;i<num;i++){
+		for(j=0;j<num;j++){
+			scanf("%c",&A[i][j]);
+			
+		}
+	getchar();
+	}
+   
+	for(c=0;c<num;c++){
+		for(cnt=0;cnt<num;cnt++){
+			scanf("%c",&B[c][cnt]);
+			
+		}
+	getchar();	
+	}
+   
+	int ii,cc;
+	for(ii=0;ii<num;ii++){
+		for(cc=0;cc<num;cc++){
+			if(A[ii][cc]!=B[ii][cc]){
+			
+			printf("YES");
+			return 0;}
+		}
+	}
+	printf("NO");
+	
+}

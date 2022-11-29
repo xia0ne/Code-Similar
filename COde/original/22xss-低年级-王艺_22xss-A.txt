@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{ int t;
+  char a[]="I love ACM!";
+  scanf("%d",&t);
+   if(t==1)
+     printf("%d\n",20);
+   else if(t==2)
+     printf("%d\n",7);
+   else if(t==3)
+     printf("%d\n",6);
+   else if(t==4)
+     printf("%d\n",3);
+   else if(t==5)
+     printf("%d\n",41);
+   else if(t==6)	 	 	 	   
+	 printf("%s\n",a);
+	 return 0;
+}

@@ -1,0 +1,38 @@
+#include <iostream>
+#include<stdio.h>
+#include <stack>
+#include <algorithm>
+#include<math.h>
+#include<queue>
+#include<map>
+#include<vector>
+#include<cstring>
+#define ull unsigned long long
+#define ll long long
+using namespace std;
+map<char,int>mp,mp1;
+int main() {
+	string s;
+	int flag=1;
+	cin>>s;
+	for(int i=0;i<s.length();i++){
+		mp[s[i]]++;
+	}
+	cin>>s;
+	for(int i=0;i<s.length();i++){
+		mp1[s[i]]++;
+	}
+	for(auto x:mp){
+		if(mp1[x.first]<x.second){
+			flag=0;
+			break;
+		}
+	}
+	if(flag==1){
+		cout<<"Yes"<<endl;
+	}
+	else {
+		cout<<"No"<<endl;
+	}
+	return 0;
+}

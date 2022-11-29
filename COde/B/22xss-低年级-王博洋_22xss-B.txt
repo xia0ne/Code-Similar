@@ -1,0 +1,44 @@
+#include<stdio.h>
+int main()
+{
+	char str_letter[101];
+	char str_paper[101];
+	int i=0,j=0;
+	int letter[26]={0};
+	int paper[26]={0};
+	scanf("%s",str_letter);
+	scanf("%s",str_paper);
+	int num=0;
+	i=0;
+	while(str_letter[i]!='\0')
+	{
+		num=str_letter[i]-'a';
+		letter[num]++;
+		i++;
+	}
+	i=0;
+	while(str_paper[i]!='\0')
+	{
+		num=str_paper[i]-'a';
+		paper[num]++;
+		i++;
+	}
+	int flag=1;
+	for(i=0;i<26;i++)
+	{
+		if(paper[i]<letter[i])
+		{
+			flag=0;
+			break;
+		}
+	}
+	if(flag)
+	{
+		printf("Yes");
+	}
+	else
+	{
+		printf("No");
+	}
+	return 0;
+}

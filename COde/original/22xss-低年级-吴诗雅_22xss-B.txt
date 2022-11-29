@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+
+int a[27];
+int b[27];
+int main()
+{
+
+char name[101];
+char kit[101];
+gets(name);
+gets(kit);
+int i;
+
+
+for(i=0;name[i]!='\0';i++)
+	a[name[i]-'a']++;
+for(i=0;kit[i]!='\0';i++)
+	b[kit[i]-'a']++;
+for(i=0;i<26;i++)
+{if(a[i]>b[i])
+ 	{
+	 printf("No");
+ 	return 0;}
+}
+	printf("Yes");
+	return 0;}

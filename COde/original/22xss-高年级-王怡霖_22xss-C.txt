@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int maxn=200005,inf=0x3f3f3f3f;
+int m,n;
+char a[10][10],b[10][10];
+int main(){
+	for(int i=0;i<8;++i)
+		for(int j=0;j<8;++j)
+			cin>>a[i][j];
+	for(int i=0;i<8;++i)
+		for(int j=0;j<8;++j)
+			cin>>b[i][j];
+	int f=0;
+	for(int i=0;i<8;++i){
+		for(int j=0;j<8;++j)
+			if(a[i][j]!=b[i][j]){
+				f=1;
+				break;
+			}
+		if(f) break;
+	}
+	if(f) cout<<"YES";
+	else cout<<"NO";
+				
+	return 0;
+}

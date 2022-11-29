@@ -1,0 +1,34 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+#include<string>
+
+struct node{
+	string s;
+	int a;
+	int b;
+	int c;
+}Node[1005];
+
+bool cmp(node x,node y){
+	if(x.c!=y.c)
+		return x.c>y.c;
+	else 
+	    return x.s<y.s;
+}
+
+int main() {
+	int n,i;
+	cin>>n;
+	for(i=0;i<n;i++){
+		cin>>Node[i].s;
+		cin>>Node[i].a>>Node[i].b;
+		Node[i].c=Node[i].a*10+Node[i].b;
+	}
+	sort(Node,Node+n,cmp);
+	for(i=0;i<n;i++){
+		cout<<Node[i].s<<" ";
+		cout<<Node[i].c<<endl;
+	}
+	return 0;
+}

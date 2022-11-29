@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+  int T,a,b,c,d,e;
+  scanf("%d",&T);
+  if (T == 1) 
+  {
+    a=0;
+    for(int i=1;i<+100;i++)
+    {
+      if(i%10==6)
+        a++;
+      if(i/10%10==6)
+        a++;
+    }
+    printf("%d",a);  
+  }
+  else if (T == 2) 
+  {
+    b=(6+666)%7;
+    if(b==0)
+      b=7;
+    printf("%d",b);
+  }
+  else if (T == 3) 
+  {
+    c=6;
+    printf("%d",c);
+  }
+  else if (T == 4) 
+  {
+    d=3;
+    printf("%d",d);  
+}
+  else if (T == 5) {
+e=41;
+    printf("%d",e);
+} else if (T == 6) {
+    printf("I love ACM!");
+}
+return 0;
+}

@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main(){
+	int T;
+	scanf("%d",&T);
+	if(T==1){
+		int ans1=20;
+		printf("%d",ans1);
+	}
+	else if(T==2){
+		int ans2=7;
+		printf("%d",ans2);
+	}
+	else if(T==3){
+		int ans3=6;
+		printf("%d",ans3);
+	}
+	else if(T==4){
+		int ans4=3;
+	printf("%d",ans4);
+	}
+	else if(T==5){
+		int ans5=41;
+		printf("%d",ans5);
+	}
+	else if(T==6){
+		printf("I love ACM!");
+	}
+	return 0;
+}

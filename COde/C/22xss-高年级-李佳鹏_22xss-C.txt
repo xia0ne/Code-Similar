@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main() {
+	char a[8][8];
+	char b[8][8];
+  	char k;
+	for(int i=0;i<8;i++){
+		for(int j=0;j<8;j++){
+			scanf("%c",&a[i][j]);	
+		}
+		scanf("%c",&k);	
+	}
+	
+	for(int i=0;i<8;i++){
+		for(int j=0;j<8;j++){
+			scanf("%c",&b[i][j]);
+		
+		}
+			scanf("%c",&k);	
+	}	
+
+	for(int i=0;i<8;i++){
+		for(int j=0;j<8;j++){
+			if(a[i][j]!=b[i][j]){
+				printf("YES");
+				return 0;
+			}
+		}
+    }
+		printf("NO");
+		return 0;
+}

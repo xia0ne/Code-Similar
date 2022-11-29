@@ -1,0 +1,36 @@
+#include <iostream>
+#include<stdio.h>
+#include <stack>
+#include <algorithm>
+#include<math.h>
+#include<queue>
+#include<map>
+#include<vector>
+#include<cstring>
+#define ull unsigned long long
+#define ll long long
+using namespace std;
+map<string,int>mp,mp1;
+int main() {
+	string s[9],w[9];
+	int flag=1;
+	for(int i=1;i<=8;i++){
+		cin>>s[i];
+	}
+	for(int i=1;i<=8;i++){
+		cin>>w[i];
+	}
+	for(int i=1;i<=8;i++){
+		if(s[i]!=w[i]){
+			flag=0;
+			break;
+		}
+	}
+	if(flag==1){
+		cout<<"NO"<<endl;
+	}
+	else {
+		cout<<"YES"<<endl;
+	}
+	return 0;
+}

@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+// 填上你觉得需要的其他头文件
+int main() {
+int T;
+scanf("%d", &T);
+if (T == 1) {
+  cout<<20;
+// 请自行完成问题 1 的代码
+} else if (T == 2) {
+  cout<<7;
+// 请自行完成问题 2 的代码
+} else if (T == 3) {
+  cout<<6;
+// 请自行完成问题 3 的代码
+} else if (T == 4) {
+  cout<<3;
+// 请自行完成问题 4 的代码
+} else if (T == 5) {
+  cout<<41;
+// 请自行完成问题 5 的代码
+} else if (T == 6) {
+  cout<<"I love ACM!";
+// 请自行完成问题 6 的代码
+}
+return 0;
+}

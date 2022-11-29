@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main() {
+int T,n;
+cin >> T;
+if (T == 1) {
+	n=20;
+cout<<n;
+} else if (T == 2) {
+n=7;
+cout<<n;
+} else if (T == 3) {
+n=6;
+cout<<n;
+} else if (T == 4) {
+n=3;
+cout<<n;
+} else if (T == 5) {
+n=41;
+cout<<n;
+} else if (T == 6) {
+cout<<"I love ACM!";
+}
+return 0;
+}

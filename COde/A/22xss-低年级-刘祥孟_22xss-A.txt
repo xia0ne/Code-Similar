@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+	int T;
+	scanf("%d", &T);
+	switch (T)
+	{
+	case 1:printf("20\n"); break;
+	case 2:printf("7\n"); break;
+	case 3:printf("6\n"); break;
+	case 4:printf("3\n"); break;
+	case 5:printf("41\n"); break;
+	case 6:printf("I love ACM!\n"); break;
+	}
+	return 0;
+}

@@ -1,0 +1,50 @@
+#include<stdio.h>
+int main()
+{
+	char e;
+	bool T=true;
+	int i=0;
+	int j;
+	int n,m;
+	char a[100];
+	char b[100];
+  	for(int k=0;k<100;k++)
+    {
+      a[k]=' ';
+      b[k]=' ';
+    }
+	scanf("%c",&e);
+	while(e!='\n')
+	{
+		a[i]=e;
+		i++;
+		scanf("%c",&e);
+	}
+	n=i;
+	i=0;
+	scanf("%c",&e);
+	while(e!='\n')
+	{
+		b[i]=e;
+		i++;
+		scanf("%c",&e);
+	}
+	m=i;
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<m;j++)
+		{
+			if(a[i]==b[j])
+			{
+				b[j]=' ';
+				break;
+			}
+		}
+		if (j==m)
+			T=false;
+	}
+	if(T)
+		printf("Yes");
+	else
+		printf("No");
+ }

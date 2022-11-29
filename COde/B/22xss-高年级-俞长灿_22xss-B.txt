@@ -1,0 +1,22 @@
+#include <iostream>
+#include <algorithm>
+// 填上你觉得需要的其他头文件
+using namespace std;
+int main(){
+    string arr1,arr2;
+    cin>>arr1>>arr2;
+    for(auto &item1:arr1){
+        for(auto &item2:arr2){
+            if(item1 == item2){
+                item2 = ' ';
+                goto l;
+            }
+        }
+        cout<<"No";
+        return 0;
+        l:
+        continue;
+    }
+    cout<<"Yes";
+    return 0;
+}

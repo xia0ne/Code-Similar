@@ -1,0 +1,68 @@
+#include<stdio.h>
+int main()
+{
+    char a1[9], a2[9], a3[9], a4[9], a5[9], a6[9], a7[9], a8[9], a9[9], a10[9], a11[9], a12[9], a13[9], a14[9], a15[9], a16[9];
+    int n;
+    int i = 0;
+    scanf("%s", a1);
+    scanf("%s", a2);
+    scanf("%s", a3);
+    scanf("%s", a4);
+    scanf("%s", a5);
+    scanf("%s", a6);
+    scanf("%s", a7);
+    scanf("%s", a8);
+    scanf("%s", a9);
+    scanf("%s", a10);
+    scanf("%s", a11);
+    scanf("%s", a12);
+    scanf("%s", a13);
+    scanf("%s", a14);
+    scanf("%s", a15);
+    scanf("%s", a16);
+    for (n = 0; n < 8; n++)
+    {
+        if (a1[n] == a9[n])
+            i++;
+    }
+    for (n = 0; n < 8; n++)
+    {
+        if (a2[n] == a10[n])
+            i++;
+    }
+    for (n = 0; n < 8; n++)
+    {
+        if (a3[n] == a11[n])
+            i++;
+    }
+    for (n = 0; n < 8; n++)
+    {
+        if (a4[n] == a12[n])
+            i++;
+    }
+    for (n = 0; n < 8; n++)
+    {
+        if (a5[n] == a13[n])
+            i++;
+    }
+    for (n = 0; n < 8; n++)
+    {
+        if (a6[n] == a14[n])
+            i++;
+    }
+    for (n = 0; n < 8; n++)
+    {
+        if (a7[n] == a15[n])
+            i++;
+    }
+    for (n = 0; n < 8; n++)
+    {
+        if (a8[n] == a16[n])
+            i++;
+    }
+    if (i == 64)
+	{printf("NO");}
+    else
+	{printf("YES");}
+    return 0;
+}

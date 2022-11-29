@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	char first[9][9];
+	char second[9][9];
+	int i=0,j=0,isprime=0;
+	for(i=0;i<8;i++)
+		scanf("%s",first[i]);
+	for(j=0;j<8;j++)
+		scanf("%s",second[j]);
+	for(i=0;i<8;i++){
+		for(j=0;j<8;j++){
+			if(first[i][j]!=second[i][j]){
+				isprime=1;
+				printf("YES\n");
+				break;
+			}
+		}if(isprime==1)
+			break;
+	}if(isprime==0)
+		printf("NO\n");
+	return 0;
+}

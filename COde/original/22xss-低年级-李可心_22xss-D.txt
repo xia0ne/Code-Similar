@@ -1,0 +1,47 @@
+#include<iostream>
+#include<algorithm> 
+using namespace std;
+struct node{
+	int lh,ch,sum;
+	string ming;
+}ren[10001];
+int n;
+void huan(int a,int b)
+{
+	ren[0].ming=ren[a]. ming;
+	ren[0].sum=ren[a]. sum;
+	ren[0].lh=ren[a]. lh;
+	ren[0].ch=ren[a].ch;
+	ren[a].ming=ren[b]. ming;
+	ren[a].sum=ren[b]. sum;
+	ren[a].lh=ren[b]. lh;
+	ren[a].ch=ren[b].ch;
+	ren[b].ming=ren[0]. ming;
+	ren[b].sum=ren[0]. sum;
+	ren[b].lh=ren[0]. lh;
+	ren[b].ch=ren[0].ch;
+}
+void paifen();
+void paiming();
+int main(){
+	cin>>n;
+	for(int i=1;i<=n;i++) {
+	cin>>ren[i].ming>>ren[i].lh>>ren[i].ch;
+	ren[i].sum=ren[i].lh*10+ren[i].ch;	
+	}
+paifen();paiming();
+	for(int i=1;i<=n;i++)
+		cout<<ren[i].ming<<" "<<ren[i].sum<<endl;
+	return 0;
+}
+void paifen(){
+	for(int i=1;i<=n;i++)
+	for(int j=i+1;j<=n;j++) 
+	if(ren[i].sum<ren[j].sum)huan(i,j);
+}
+void paiming(){
+	for(int i=1;i<=n;i++)
+	for(int j=i+1;j<=n;j++)
+	if(ren[i].sum==ren[j].sum&&ren[i].ming>ren[j].ming)
+	huan(i,j);
+}

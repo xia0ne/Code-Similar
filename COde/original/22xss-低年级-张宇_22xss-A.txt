@@ -1,0 +1,37 @@
+#include<stdio.h>
+// 填上你觉得需要的其他头文件
+int main() {
+int T;
+scanf("%d", &T);
+if (T == 1) {
+	int i;
+	i=20;
+	printf("%d",i);
+// 请自行完成问题 1 的代码
+} else if (T == 2) {
+	int i;
+	i=7;
+	printf("%d",i);
+// 请自行完成问题 2 的代码
+} else if (T == 3) {
+	int i;
+	i=6;
+	printf("%d",i);
+// 请自行完成问题 3 的代码
+} else if (T == 4) {
+	int i;
+	i=3;
+	printf("%d",i);
+// 请自行完成问题 4 的代码
+} else if (T == 5) {
+	int i;
+	i=41;
+	printf("%d",i);
+// 请自行完成问题 5 的代码
+} else if (T == 6) {
+	printf("I love ACM!");
+	
+// 请自行完成问题 6 的代码
+}
+return 0;
+}

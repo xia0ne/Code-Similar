@@ -1,0 +1,30 @@
+#include <iostream>
+#include<vector>
+#include <string>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	int n;
+	cin >> n;
+	 int lie[200001];
+	 int ans = 0;
+	 int go = 0;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> lie[i];
+		if (lie[i] == 0)
+			go ++;
+	}
+	sort(lie, lie + n);
+	int *p =unique(lie, lie + n);
+	for (auto it = lie; it != p; it++)
+		if (*it != 1)
+			ans++;
+	if (go == 0)
+		cout << ans;
+	else if (go == 1)
+		cout << '1';
+	else
+		cout << '0';
+}

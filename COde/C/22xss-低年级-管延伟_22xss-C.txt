@@ -1,0 +1,32 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main()
+{
+	int arr[8] = { 0 };
+	int brr[8] = { 0 };
+	int i, x = 1;
+	for (i = 0; i < 8; i++)
+	{
+		scanf("%d", &arr[i]);
+	}
+	for (i = 0; i < 8; i++)
+	{
+		scanf("%d", &brr[i]);
+	}
+	for (i = 0; i < 8; i++)
+	{
+		if (arr[i] != brr[i])
+		{
+			x = 0;
+		}
+	}
+	if (x == 1)
+	{
+		printf("NO\n");
+	}
+	else
+	{
+		printf("YES\n");
+	}
+	return 0;
+}

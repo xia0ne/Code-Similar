@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main() {
+int T,a;
+scanf("%d", &T);
+if (T == 1) {
+a=20;
+  printf("%d\n",a);
+} else if (T == 2) {
+a=7;
+  printf("%d\n",a);
+} else if (T == 3) {
+a=6;
+  printf("%d\n",a);
+} else if (T == 4) {
+a=3;
+  printf("%d\n",a);
+} else if (T == 5) {
+a=41;
+  printf("%d\n",a);
+} else if (T == 6) {
+  printf("I love ACM!\n");
+}
+return 0;
+}

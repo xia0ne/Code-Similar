@@ -1,0 +1,33 @@
+#include <iostream>
+#include <set>
+using namespace std;
+
+
+set<int> set1;
+int num0;
+int num1;
+int main()
+{
+    int flag1 = 0;
+    int flag0 = 0;
+    int n;
+    cin >> n;
+    int t;
+    for(int i  = 0 ;i < n; i++){
+        cin >> t;
+        if(t == 1) flag1 = 1, num1++;
+        if(t == 0) flag0 = 1, num0++;
+        set1.insert(t);
+    }
+    if(flag0 == 1) {
+        if(num0 == 1) cout << 1;
+        else cout << 0;
+        return 0;
+    }
+    if(flag1 == 1){
+        cout << set1.size() - 1;
+        return 0;
+    }
+    cout << set1.size();
+    return 0;
+}

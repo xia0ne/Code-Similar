@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int a[8];
+	int b[8];
+	int i,j,n,m=0;
+		for(j=0;j<8;j++){
+			cin>>a[j];
+		}
+	
+
+		for(j=0;j<8;j++){
+			cin>>b[j];
+		}
+	
+	for(i=0;i<8;i++){
+		
+			if(a[i]!=b[i]){
+				m=1;
+				cout<<"YES";
+				break;
+			}
+		
+	}
+	if(m==0) cout<<"NO";
+	return 0;
+	
+}

@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int a[27];
+int b[27];
+int main()
+{
+string st;
+string zh;
+int c=0;
+int d=0;
+int sum=0;
+while(getline(cin,st))
+{
+	for(int j=0;j<st.length();j++)
+	{
+		a[st[j]-'a']++;
+		c=j;
+	}
+	if(c+1==st.length()) break;
+}
+while(getline(cin,zh))
+{
+	for(int i=0;i<zh.length();i++)
+	{
+		b[zh[i]-'a']++;
+		d=i;
+	}
+	if(d+1==zh.length()) break;
+}
+for(int s=0;s<26;s++)
+{
+	if(a[s]>b[s]) 
+	{
+		cout<<"No";
+		sum++;
+		break;
+	}
+}
+if(sum==0) cout<<"Yes";
+return 0;
+}

@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+	int T;
+	scanf("%d", &T);
+	if (T == 1) {
+		int a = 20;
+		printf("%d", a);
+	} else if (T == 2) {
+		int a;
+		a = 666 % 7 ;
+		printf("7");
+	} else if (T == 3) {
+		printf("6");
+	} else if (T == 4) {
+		printf("3");
+	} else if (T == 5) {
+        printf("41");
+	} else if (T == 6) {
+		printf("I love ACM!");
+	}
+	return 0;
+}

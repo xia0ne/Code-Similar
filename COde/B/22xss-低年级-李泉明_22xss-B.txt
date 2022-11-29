@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,B=0;
+	char a[105], b[105];
+	fgets(a,105,stdin);
+	fgets(b, 105, stdin);
+	for (j = 0; j < 105; j++)
+	{
+		if (!(a[j] >= 'a' && a[j] <= 'z'))
+			break;
+		for (i = 0; i < 105; i++)
+		{
+			if (a[j] == b[i])
+			{
+				b[i] = 0;
+				B++;
+				break;
+			}
+		}
+	}
+	if (B == j)
+		printf("Yes\n");
+	else
+		printf("No\n");
+	return 0;
+}

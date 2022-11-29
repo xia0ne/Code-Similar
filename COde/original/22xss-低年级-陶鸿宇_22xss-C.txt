@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	char str1[8][9];
+	char str2[8][9];
+	for (int i = 0; i < 8; i++)
+	{
+		gets(str1[i]);
+	}
+	for (int i = 0; i < 8; i++)
+	{
+		gets(str2[i]);
+	}
+	int jdg = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		char* t;
+		t = strstr(str1[i], str2[i]);
+		if (t == NULL)
+		{
+			jdg = 1;
+		}
+	}
+	if (jdg == 1)
+	{
+		printf("YES");
+	}
+	else
+	{
+		printf("NO");
+	}
+}

@@ -1,0 +1,76 @@
+#include<stdio.h>
+int wenti1();
+int wenti2();
+int wenti3();
+int wenti4();
+int wenti5();
+void wenti6();
+int main()
+{
+	int a,n;
+	scanf("%d",&a);
+	switch(a)
+	{
+		case 1:wenti1();break;
+		case 2:wenti2();break;
+		case 3:wenti3();break;
+		case 4:wenti4();break;
+		case 5:wenti5();break;
+		case 6:wenti6();break;
+	}
+	return 0;
+} 
+int wenti1()//1?100之间共有多少个数字"6"?
+{
+	int i,a=0;
+	for(i=1;i<=100;i++)
+	{
+		if(i%10==6)
+		a+=1;
+        if(i/10==6)
+        a+=1;
+    }
+	printf("%d",a);
+}
+int wenti2()//如果今天是周六，那么666天后是周几?输出一个整数(1-7)
+{
+	int a=6,b=666,c,d;
+    c=(a+b%7);
+    if(c>7)
+    d=c-7;
+    if(c<=7)
+    d=c;
+    printf("%d",d);
+}
+int wenti3()//一个材质均匀的骰子，期望扔多少次能得到一个6?
+{
+	int a=6;
+	printf("%d",a);
+}
+int wenti4()
+{
+	int i=2,m,a=0,n=0,p;
+	while(i<=6)
+	{
+		for(m=2;m<i;m++)
+		{
+			if(i%m==0)
+		    a+=1;
+		}
+		if(a==i-1)
+		n+=1;
+		i++;
+	}
+	p=6-3;
+	printf("%d",p);
+}
+int wenti5()
+{
+	int a;
+	a=1*6*6+0*6+5*1;
+	printf("%d",a);
+}
+void wenti6()
+{
+	printf("I love ACM!\n");
+}

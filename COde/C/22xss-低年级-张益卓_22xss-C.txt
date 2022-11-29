@@ -1,0 +1,48 @@
+int main()
+{
+	char l1[9] = "1";
+	scanf("%s", l1);
+	char l2[9] = "1";
+	scanf("%s", l2);
+	char l3[9] = "1";
+	scanf("%s", l3);
+	char l4[9] = "1";
+	scanf("%s", l4);
+	char l5[9] = "1";
+	scanf("%s", l5);
+	char l6[9] = "1";
+	scanf("%s", l6);
+	char l7[9] = "1";
+	scanf("%s", l7);
+	char l8[9] = "1";
+	scanf("%s", l8);
+	//
+	char ll1[9] = "1";
+	scanf("%s", ll1);
+	char ll2[9] = "1";
+	scanf("%s", ll2);
+	char ll3[9] = "1";
+	scanf("%s", ll3);
+	char ll4[9] = "1";
+	scanf("%s", ll4);
+	char ll5[9] = "1";
+	scanf("%s", ll5);
+	char ll6[9] = "1";
+	scanf("%s", ll6);
+	char ll7[9] = "1";
+	scanf("%s", ll7);
+	char ll8[9] = "1";
+	scanf("%s", ll8);
+	if ((strcmp(l1, ll1) )== 0 && (strcmp(l2, ll2)) == 0&&
+		(strcmp(l3, ll3)) == 0&& (strcmp(l4, ll4)) == 0&&
+		(strcmp(l5, ll5)) == 0&& (strcmp(l6, ll6)) == 0&&
+		(strcmp(l7, ll7)) == 0&& (strcmp(l8, ll8)) == 0)
+	{
+		printf("%s", "NO");
+	}
+	else
+	{
+		printf("%s", "YES");
+	}
+	return 0;
+}

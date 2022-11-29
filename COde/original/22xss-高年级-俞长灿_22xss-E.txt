@@ -1,0 +1,26 @@
+#include <iostream>
+#include <set>
+//#include "cstring"
+#include <algorithm>
+// 填上你觉得需要的其他头文件
+using namespace std;
+int main(){
+    int64_t n;
+    cin>>n;
+    int64_t arr1[n];
+    set<int64_t >result;
+    for(int64_t i = 0;i < n;i++){
+        cin>>arr1[i];
+        if(arr1[i] != 1)
+            result.insert(arr1[i]);
+    }
+    if(count(arr1,arr1 + n,0) == 1){
+        cout<<1;
+        return 0;
+    } else if(count(arr1,arr1 + n,0) > 1){
+        cout<<0;
+        return 0;
+    }
+    cout<<result.size();
+    return 0;
+}

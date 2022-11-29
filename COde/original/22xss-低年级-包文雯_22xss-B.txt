@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+int book[105];
+int main()
+{
+	char a[105],b[105];
+	int flag=0;
+	int i,j;
+	scanf("%s",a);
+	scanf("%s",b);
+	for(i=0;i<strlen(a);i++)
+	{
+		flag=0;
+		for(j=0;j<strlen(b);j++)
+		{
+			if(a[i]==b[j]&&book[j]==0) {flag=1;book[j]=1;break;}
+		}
+		if(flag==0) break;
+	}
+	if(flag==0) printf("No");
+	else printf("Yes");
+	return 0;
+}

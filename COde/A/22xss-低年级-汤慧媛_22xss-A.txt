@@ -1,0 +1,48 @@
+#include<iostream>
+
+using namespace std;
+int main() {
+	int T,i,j,a,b,ans=0;
+	cin >> T;
+	if (T == 1) {
+      for(i=1;i<=100;i++){
+      	a=i%10;
+      	b=i/10;
+      	if(a==6)ans++;
+      	if(b==6)ans++;
+	  }
+	  cout<<ans<<endl;
+	} else if (T == 2) {
+		a=666%7;
+		for(i=6;a>0;a--){
+			if(i==7)i=0;
+			i++;
+		}
+		ans=i;
+		cout<<ans<<endl;		// 请自行完成问题 2 的代码
+	} else if (T == 3) {
+		cout<<"6"<<endl;
+	} else if (T == 4) {
+		for(i=1;i<=6;i++){
+			for(j=2;j<i;j++){
+				if(i%j==0)break;
+			}
+			if(j==i)ans++;
+		}
+		cout<<ans<<endl;// 请自行完成问题 4 的代码
+	} else if (T == 5) {
+		b=105;
+		for(i=0;i<3;i++){
+			a=b%10;
+			for(j=0;j<i;j++){
+				a=a*6;
+			}
+			ans+=a;
+			b=b/10;
+		}
+		cout<<ans<<endl;
+	} else if (T == 6) {
+  		cout<<"I love ACM!"<<endl;
+	}
+	return 0;
+	}

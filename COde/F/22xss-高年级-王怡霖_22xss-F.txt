@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int maxn=100005,inf=0x3f3f3f3f;
+int m,n,cnt0=0,cnt1=0;
+double a,b;
+string nm;
+struct nd{
+	double ch;
+	bool gua; 
+}x[maxn];
+bool cmp(nd z,nd w){
+	return z.ch>w.ch;
+}
+int main(){
+	cin>>n;
+	for(int i=0;i<n;++i)
+		x[i].gua=0;
+	for(int k=0;k<n;++k){
+//		cout<<k<<":"<<endl;
+		cin>>m;
+		double sc=0,sum=0,zong;
+		int f=0;
+		for(int i=0;i<m;++i){
+			cin>>a>>b;
+			if(b<60) f=1;
+			sc+=a;
+			sum=sum+(a*b);
+		}
+//		cout<<"总数: "<<sum<<endl;
+		cin>>zong;
+		sum=sum/sc;
+//		cout<<"学习成绩："<<sum<<endl;
+		x[k].ch=0.7*sum+0.3*zong;
+//		cout<<"zong: "<<x[k].ch<<endl;
+		x[k].gua=f;
+	}
+	//yi deng
+	int yi=(int)(n*0.2+0.5);
+//	cout<<"yi: "<<yi<<endl;
+	//erdengrenshu	
+	int er=(int)(n*0.6+0.5);
+//	cout<<"er: "<<er<<endl;
+	sort(x,x+n,cmp);
+	int jin=0;
+	for(int i=0;i<n;++i){
+		if(x[i].gua) continue;
+		if(i<=yi-1){
+			jin+=800;
+		}else if(i<=er-1){
+			jin+=400;
+		}
+	}
+	cout<<jin;
+	return 0;
+}

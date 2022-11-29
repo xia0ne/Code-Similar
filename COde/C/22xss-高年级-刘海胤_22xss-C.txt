@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+int main() {
+	char s1[64], s2[64];
+	for (int i = 0; i < 64; i++) {
+		char temp;
+		temp=getchar();
+		if (temp == '\n') {
+			i--;
+			continue;
+		}
+		s1[i] = temp;
+	}
+	for (int i = 0; i < 64; i++) {
+		char temp;
+		temp = getchar();
+		if (temp == '\n') {
+			i--;
+			continue;
+		}
+		s2[i] = temp;
+	}
+	bool flag = false;
+	for (int i = 0; i < 64; i++) {
+		char temp1 = s1[i], temp2 = s2[i];
+		if (temp1 != temp2) {
+			flag = true;
+			break;
+		}
+	}
+	if (flag)
+		cout << "YES";
+	else
+		cout << "NO";
+}

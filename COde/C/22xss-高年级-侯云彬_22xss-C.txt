@@ -1,0 +1,29 @@
+# include<iostream>
+using namespace std;
+int main()
+{
+	char a[8][8];
+	char b[8][8];
+	for(int i=0; i<8; i++)
+		for(int j=0; j<8; j++)
+		{
+			cin >> a[i][j];
+		}
+	for(int i=0; i<8; i++)
+		for(int j=0; j<8; j++)
+		{
+			cin >> b[i][j];
+		}
+	int x=1;
+	for(int i=0; i<8; i++)
+		for(int j=0; j<8; j++)
+		{
+			if(b[i][j]!=a[i][j])
+				x=0;
+		}
+		if(x==0)
+		cout<<"YES";
+		else
+		cout<<"NO";
+	return 0;
+}

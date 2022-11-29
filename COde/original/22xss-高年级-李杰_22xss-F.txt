@@ -1,0 +1,57 @@
+#include <iostream>
+#include <map>
+#include <set>
+#include <algorithm>
+#include <vector>
+#include <cmath>
+#define ll long long
+using namespace std;
+struct str{
+	double zh;
+	bool flag;
+}st[100010];
+vector<str> vec;
+bool cmp(str s1,str s2){
+	return s1.zh > s2.zh;
+}
+int main(){
+	int n;
+	cin>>n;
+	for(int i=1;i<=n;i++){
+		int k;
+		cin>>k;
+		double sum = 0;
+		double cnt = 0;
+		double xf,sc;
+		int flagg = 1;
+		for(int j=1;j<=k;j++){
+			cin>>xf>>sc;
+			cnt += xf;
+			sum += xf*sc;
+			if(sc < 60) flagg = 0;
+		}
+		sum /= cnt;
+		double zc;
+		cin>>zc;
+		double zh = zc*0.3+sum*0.7;
+		st[i].zh = zh;
+		if(flagg == 0) {
+			st[i].flag = false;
+		}
+		else st[i].flag = true;
+		vec.push_back(st[i]);
+		
+	}
+	sort(vec.begin(),vec.end(),cmp);
+	ll ans = 0;
+	int size = vec.size();
+	int k1 = round(n * 0.2);
+	int k2 = round(n * 0.6);
+	for(int i=0;i<size;i++){
+		//cout<<vec[i].flag <<" "<<vec[i].zh<<endl;
+		if(vec[i].flag && i+1 > k1 && i+1<=k2) ans += 400;
+		else if(vec[i].flag && i+1<=k1) ans += 800;
+	}
+	cout<<ans<<endl;
+	return 0;
+}

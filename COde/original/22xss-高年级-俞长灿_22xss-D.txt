@@ -1,0 +1,39 @@
+#include <iostream>
+#include "cstring"
+//#include <algorithm>
+// 填上你觉得需要的其他头文件
+using namespace std;
+struct tone{
+    char *name = new char[20];
+    int n1;
+    int n2;
+    int hard;
+};
+int main(){
+    int n;
+    cin>>n;
+    tone t[n];
+    for(int i = 0;i < n;i++){
+        cin>>t[i].name;
+        cin>>t[i].n1>>t[i].n2;
+        t[i].hard = t[i].n1*10 + t[i].n2;
+    }
+    for(int i = 0;i < n - 1;i++){
+        for(int j = i + 1;j < n;j++){
+            if(t[i].hard < t[j].hard){
+                tone temp = t[i];
+                t[i] = t[j];
+                t[j] = temp;
+            } else if(t[i].hard == t[j].hard){
+                if(strcmp(t[i].name,t[j].name) > 0){
+                    tone temp = t[i];
+                    t[i] = t[j];
+                    t[j] = temp;
+                }
+            }
+        }
+    }
+    for(int i = 0;i < n;i++){
+        cout<<t[i].name<<" "<<t[i].hard<<"\n";
+    }
+}

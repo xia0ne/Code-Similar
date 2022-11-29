@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+	int f[8], s[8];
+	int a,  t = 1;
+	for (a = 0; a < 8; a++)
+	{
+		scanf("%d", &f[a]);
+	}
+	for (a = 0; a < 8; a++)
+	{
+		scanf("%d", &s[a]);
+	}
+	for (a = 0; a < 8; a++)
+	{
+		if (f[a] != s[a])
+			{
+				t = -1;
+				break;
+			}
+	}
+	if (t == -1)
+	{
+		printf("YES");
+	}else if(t==1)
+	{
+		printf("NO");
+	}
+	return 0;
+}

@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<algorithm>
+#include<cstring>
+using namespace std;
+struct tong
+{
+	char a[20];
+	int b;
+};
+int main()
+{
+	int i,j;
+	int n;
+	int d,c;
+	int flag;
+	struct tong temp;
+	char b[20];
+	struct tong p[1000];
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%s",p[i].a);
+		scanf("%d",&d);
+		scanf("%d",&c);
+		p[i].b=d*10+c;
+	}
+	for(i=0;i<n;i++)
+	{
+		for(j=i+1;j<n;j++)
+		{
+			if(p[i].b<p[j].b)
+			{
+				temp=p[i];
+				p[i]=p[j];
+				p[j]=temp;
+			}
+			if(p[i].b==p[j].b)
+			{
+				flag=strcmp(p[i].a,p[j].a);
+				if(flag>0)
+				{
+					temp=p[i];
+					p[i]=p[j];
+					p[j]=temp;
+				}
+			}
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		printf("%s ",p[i].a);
+		printf("%d\n",p[i].b);
+	}
+	
+	return 0;
+}

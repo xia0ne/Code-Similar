@@ -1,0 +1,35 @@
+#include<iostream>
+#include<string>
+#include<cstdio>
+#include<cstring>
+#include<algorithm>
+#include<cmath>
+
+using namespace std;
+
+int a[101][101];
+int b[101][101];
+int main(){
+    for(int i=1;i<=8;i++){
+        char ss[101]; cin>>ss;
+        for(int j=0;j<8;j++){
+            a[i][j+1]=(ss[j]-'0');
+        }
+    }
+    for(int i=1;i<=8;i++){
+        char ss[101]; cin>>ss;
+        for(int j=0;j<8;j++){
+            b[i][j+1]=(ss[j]-'0');
+        }
+    }
+    for(int i=1;i<=8;i++){
+        for(int j=0;j<8;j++){
+            if(a[i][j]!=b[i][j]){
+                cout<<"YES";
+                return 0;
+            }
+        }
+    }
+    cout<<"NO";
+    return 0;
+}

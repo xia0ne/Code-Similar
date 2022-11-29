@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+  char a[65];
+  char b[65];
+  for(int i=0;i<64;i++){
+  	  cin>>a[i];
+  }
+  for(int i=0;i<64;i++){
+  	  cin>>b[i];
+  }
+  int flag=0;
+   for(int i=0;i<64;i++){
+  	  if(a[i]==b[i])
+  	  flag++;
+  }
+  if(flag==64){
+  	cout<<"NO"<<endl;
+  }
+  else
+  cout<<"YES"<<endl;
+  return 0;
+}

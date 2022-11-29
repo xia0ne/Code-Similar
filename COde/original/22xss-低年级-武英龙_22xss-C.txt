@@ -1,0 +1,70 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+	int d=1;
+char a1[9];
+char a2[9];
+char a3[9];
+char a4[9];
+char a5[9];
+char a6[9];
+char a7[9];
+char a8[9];
+char b1[9];
+char b2[9];
+char b3[9];
+char b4[9];
+char b5[9];
+char b6[9];
+char b7[9];
+char b8[9];
+scanf("%s",a1);
+scanf("%s",a2);
+scanf("%s",a3);
+scanf("%s",a4);
+scanf("%s",a5);
+scanf("%s",a6);
+scanf("%s",a7);
+scanf("%s",a8);
+scanf("%s",b1);
+scanf("%s",b2);
+scanf("%s",b3);
+scanf("%s",b4);
+scanf("%s",b5);
+scanf("%s",b6);
+scanf("%s",b7);
+scanf("%s",b8);
+if(strcmp(a1,b1)!=0){
+printf("YES");
+d=0;
+}
+else if(strcmp(a2,b2)!=0){
+printf("YES");
+d=0;
+}
+else if(strcmp(a3,b3)!=0){
+printf("YES");
+d=0;
+}
+else if(strcmp(a4,b4)!=0){
+printf("YES");
+d=0;
+}
+else if(strcmp(a5,b5)!=0){
+printf("YES");
+d=0;
+}
+else if(strcmp(a6,b6)!=0){
+printf("YES");
+d=0;
+}
+else if(strcmp(a7,b7)!=0){
+printf("YES");
+d=0;
+}
+else if(strcmp(a8,b8)!=0){
+printf("YES");
+d=0;
+}else printf("NO");
+	return 0 ;
+}

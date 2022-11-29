@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int i,j;
+	char a[65],b[65],str[10];
+	scanf("%s",a);
+	j=1;
+	for(i=0;i<7;i++)
+	{
+		scanf("%s",str);
+		strcat(a,str);
+	}
+	scanf("%s",b);
+	for(i=0;i<7;i++)
+	{
+		scanf("%s",str);
+		strcat(b,str);
+	}
+	for(i=0;i<64;i++)
+	{
+		if(a[i]!=b[i])
+		{
+			j=0;
+			break;
+		}
+	}
+	if(j)
+	{
+		printf("NO");
+	}
+	else
+	{
+		printf("YES");
+	}
+	return 0;
+}

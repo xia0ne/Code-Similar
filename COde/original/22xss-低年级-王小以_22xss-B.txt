@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{ char str[1000],pls[1000]; 
+  int tyh[1000]={0},wxy[1000]={0},i;
+  scanf("%s",str);
+  int n=strlen(str);
+  for(i=0;i<n;i++)
+  {  tyh[str[i]-'a']++;
+    
+  }
+  scanf("%s",pls);
+  int y=strlen(pls);
+  for(i=0;i<y;i++)
+  {  wxy[pls[i]-'a']++;
+    
+  }
+  for(i=0;i<26;i++)
+  {  if(tyh[i]-wxy[i]>0)
+       {
+	    printf("No");
+        break;}
+        
+  }
+  if(i==26)
+    printf("Yes");
+  return 0;  
+}

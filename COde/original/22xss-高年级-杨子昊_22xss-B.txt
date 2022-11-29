@@ -1,0 +1,38 @@
+#include <iostream>
+#include <algorithm>
+#include <queue>
+using namespace std;
+int main(){
+	int a[26]={0};
+	string s;
+	cin>>s;
+	int i=s.length();
+	while(i){
+		i--;
+    int x=(int)s[i];
+    int y=x-97;
+
+    a[y]++;
+	}
+	int b[26]={0};
+	string ss;
+	cin>>ss;
+	int ii=ss.length();
+	while(ii){
+		ii--;
+	int x=(int)ss[ii];
+    int y=x-97;
+
+    b[y]++;
+	}
+	int u=0;
+
+	for(int c=0;c<26;c++){
+		if(a[c]>b[c]){
+		cout<<"No";
+		break;
+	  }
+	  u++;
+	}
+	if(u==26)cout<<"Yes";
+}

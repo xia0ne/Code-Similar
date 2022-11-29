@@ -1,0 +1,49 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main() {
+	struct person {
+		string name;
+		int level1,level2;
+	};
+	person p[1000];
+	int number;
+	cin >> number;
+	for (int i = 0; i < number; i++) {
+		string tempName=" ";
+		int tempLevel1=0,tempLevel2=0;
+		cin >> tempName;
+		cin >> tempLevel1;
+		cin >> tempLevel2;
+		p[i].name = tempName;
+		p[i].level1 = tempLevel1;
+		p[i].level2 = tempLevel2;
+	}
+	for (int i = 0; i < number; i++) {
+		p[i].level1 = p[i].level1 * 10 + p[i].level2;
+	}
+	for (int i = 0; i < number - 1; i++) {
+		for (int j = 0; j < number - 1 - i; j++) {
+			if (p[j].level1 < p[j + 1].level1) {
+				person temp = p[j];
+				p[j] = p[j + 1];
+				p[j + 1] = temp;
+			}
+		}
+	}
+	for (int i = 0; i < number-1; i++) {
+		for (int j = 0; j < number - 1 - i; j++) {
+			if (p[j].level1== p[j + 1].level1) {
+				if (p[j].name.compare(p[j + 1].name) <= 0);
+				else if (p[j].name.compare(p[j + 1].name) > 0) {
+					person temp = p[j];
+					p[j] = p[j + 1];
+					p[j + 1] = temp;
+				}
+			}
+		}
+	}
+	for (int i = 0; i < number; i++) {
+		cout << p[i].name << " " << p[i].level1 << endl;
+	}
+}

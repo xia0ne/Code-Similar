@@ -1,0 +1,43 @@
+#include<stdio.h>
+#include<iostream>
+#include<string.h>
+using namespace std;
+struct image{
+	char name[100];
+	int a1;
+	int a2;
+	int result;
+};
+int main() {
+	int n;
+	cin>>n;
+	image m[n];
+	for(int i=0;i<n;i++){
+		cin>>m[i].name;
+		cin>>m[i].a1;
+		cin>>m[i].a2;
+		m[i].result=m[i].a1*10+m[i].a2;
+	}
+	for(int i=0;i<n-1;i++)
+	for(int j=i+1;j<n;j++){
+		if(m[i].result<m[j].result)
+		{
+			image temp;
+			temp=m[i];
+			m[i]=m[j];
+			m[j]=temp;
+		}
+		else if(m[i].result==m[j].result){
+			if(strcmp(m[i].name,m[j].name)>0){
+			image temp;
+			temp=m[i];
+			m[i]=m[j];
+			m[j]=temp;	
+			}
+		}
+	}
+	for(int i=0;i<n;i++){
+		cout<<m[i].name<<" ";
+		cout<<m[i].result<<endl;		
+	}	
+}

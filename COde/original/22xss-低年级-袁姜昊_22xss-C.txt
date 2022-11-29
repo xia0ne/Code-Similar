@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	char a[8][8], b[8][8];
+	int i, j;
+	for ( i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+		{
+			cin >> a[i][j];
+			a[i][j] += 1;
+		}
+	}
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+		{
+			cin >> b[i][j];
+			b[i][j] += 1;
+		}
+	}
+	for (i = 0; i < 8; i++)
+	{
+		for (j = 0; j < 8; j++)
+		{
+			if (a[i][j] != b[i][j])
+			{
+				cout << "YES";
+				return 0;
+			}
+			
+		}
+	}
+	
+	cout << "NO";
+	return 0;
+
+}

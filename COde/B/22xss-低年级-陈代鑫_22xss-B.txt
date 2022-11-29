@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+char a[105],b[105],c[105],d[105];
+int main(){
+	cin >> a >> b;
+	int sz1 = strlen(a);
+	int sz2 = strlen(b);
+	int i,j;
+	for(i = 0;i < sz1;i++){
+		c[a[i]]++;
+	}
+	for(j = 0;j < sz2;j++){
+		d[b[j]]++;
+	}
+	bool match = true;
+	for(int k = 97;k <= 122;k++){
+		if(c[k] > d[k]){
+			match = false;
+		}
+	}
+	if(match == true){
+		printf("Yes");
+	}else{
+		printf("No");
+	}
+	return 0;
+}

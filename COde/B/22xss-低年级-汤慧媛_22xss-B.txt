@@ -1,0 +1,22 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main() {
+	string a,b;
+	int flag[105]={0},i,j;
+	cin>>a>>b;
+	for(i=0;i<a.length();i++){
+		for(j=0;j<b.length();j++){
+			if(b[j]==a[i]&&flag[j]==0){
+				flag[j]=1;
+				break;
+			}
+		}
+		if(j==b.length())
+			break;
+	}
+	if(i==a.length())
+		cout<<"Yes"<<endl;
+	else
+		cout<<"No"<<endl;
+}

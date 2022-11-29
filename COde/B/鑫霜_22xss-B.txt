@@ -1,0 +1,34 @@
+#include<iostream>
+
+using namespace std;
+
+int st1[110];
+int st2[110];
+
+int main(){
+	string s1,s2;
+	cin >> s1 >> s2;
+	for(int i = 0; i < s1.size(); i++){
+		for(int j = 0; j < s2.size(); j++){
+			if(!st2[j] && s1[i] == s2[j]){
+				st1[i] = 1;
+				st2[j] = 1;
+				break;
+			}
+		}
+	}
+	int flag = 0;
+	for(int i = 0; i < s1.size(); i++){
+		if(!st1[i]){
+			cout << "No" << endl;
+			flag = 1;
+			break;
+		}
+	}
+	if(flag == 0){
+		cout << "Yes" << endl;
+	}
+	
+	return 0;
+	
+}

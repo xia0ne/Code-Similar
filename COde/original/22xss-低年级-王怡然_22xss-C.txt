@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+	int i,m=0,n,num,cin=0;
+	char str1[1000],str2[1000],str3[1000],str4[1000],str5[1000],str6[1000],str7[1000],str8[1000],str9[1000],str10[1000],str11[1000],str12[1000],str13[1000],str14[1000],str15[1000],str16[1000];
+	scanf("%s",str1);
+	scanf("%s",str2);
+	scanf("%s",str3);
+	scanf("%s",str4);
+	scanf("%s",str5);
+	scanf("%s",str6);
+	scanf("%s",str7);
+	scanf("%s",str8);
+	scanf("%s",str9);
+	scanf("%s",str10);
+	scanf("%s",str11);
+	scanf("%s",str12);scanf("%s",str13);scanf("%s",str14);
+	scanf("%s",str15);scanf("%s",str16);
+	if(strcmp(str1,str9)==0)
+	    cin++;
+	else
+	    goto end;
+	if(strcmp(str2,str10)==0)
+	    cin++;
+	else
+	    goto end;
+	if(strcmp(str3,str11)==0)
+	    cin++;
+	else
+	    goto end;
+	if(strcmp(str4,str12)==0)
+	    cin++;
+	else
+	    goto end;
+	if(strcmp(str5,str13)==0)
+	    cin++;
+	else
+	    goto end;
+	if(strcmp(str6,str14)==0)
+	    cin++;
+	else
+	    goto end;
+	if(strcmp(str7,str15)==0)
+	    cin++;
+	else
+	    goto end;
+	if(strcmp(str8,str16)==0)
+	    cin++;
+	else
+	    goto end;
+	if(cin==8)
+	    m=1;
+end:
+	if(m==1)
+	    printf("NO\n");
+	else
+	    printf("YES\n");
+	return 0;
+}

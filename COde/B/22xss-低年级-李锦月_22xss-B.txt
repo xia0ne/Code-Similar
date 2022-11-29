@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<string.h>
+char arr[100];
+char tmp[100];
+int main()
+{
+	scanf("%s", arr);
+	scanf("%s", tmp);
+	int len = strlen(arr);
+	int len1 = strlen(tmp);
+	int i = 0;
+	int j = 0;
+	int check = 0;
+	for (i = 0; i < len; i++)
+	{
+		int j = 0; 
+		for (j = 0; j < len1; j++)
+		{
+			if (check == 1)
+				break;
+			if (arr[i] == tmp[j])
+			{
+				tmp[j] = 1;
+				break;
+			}
+			if (arr[i] != tmp[j] && j == len1 - 1)
+			{
+				check = 1; 
+				
+				break;
+		}
+		}
+		
+	}
+	if (check == 0)
+		printf("Yes");
+	else if (check == 1)
+		printf("No");
+}

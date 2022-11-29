@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+const int M=1e3+5;
+struct node{
+	string s;
+	int sum;
+}a[M];
+bool cmp(node x,node y)
+{
+	if(x.sum!=y.sum)
+		return x.sum>y.sum;
+	else
+		return x.s<y.s;	
+}
+int main()
+{
+	int n;
+	cin>>n;
+ 	for(int i=0;i<n;i++)
+	 {
+	 	string x;
+	 	cin>>x;
+	 	int y,z;
+	 	cin>>y>>z;
+	 	a[i].s=x;
+	 	a[i].sum=y*10+z;
+	 }
+	 sort(a,a+n,cmp);
+	 for(int i=0;i<n;i++)
+	 	cout<<a[i].s<<" "<<a[i].sum<<endl;		
+	return 0;
+}

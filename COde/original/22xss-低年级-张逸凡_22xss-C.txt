@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int i,j,flag=0;
+	char a[8][9];
+	char b[8][9];
+	for(i=0;i<8;i++)
+	{
+		for(j=0;j<9;j++)
+		{
+			scanf("%c",&a[i][j]);
+		}
+	}
+	
+	for(i=0;i<8;i++)
+	{
+		for(j=0;j<9;j++)
+		{
+			scanf("%c",&b[i][j]);
+		}
+	}
+	for(i=0;i<8;i++)
+	{
+		for(j=0;j<9;j++)
+		{
+			if(a[i][j]!=b[i][j])
+			{
+				printf("YES");
+				flag=1;
+				break;
+			}
+		}
+		if(flag==1)
+		{
+			break;
+		}
+	}
+	if(flag==0)
+	{
+		printf("NO");
+	}
+	return 0;
+	
+}

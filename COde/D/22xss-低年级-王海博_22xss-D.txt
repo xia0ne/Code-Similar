@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+struct s
+{
+	string name;
+	int m; 
+};
+int n,x,y;
+int main(void)
+{
+	struct s a[1010],t;
+	cin>>n;
+	for(int i=1;i<=n;i++){
+		cin>>a[i].name>>x>>y;
+		a[i].m=x*10+y;
+	}
+	for(int i=1;i<=n-1;i++){
+		for(int j=1;j<=n-i;j++){
+			if(a[j].m<a[j+1].m){
+				t=a[j];
+				a[j]=a[j+1];
+				a[j+1]=t;
+			}
+			else if(a[j].m==a[j+1].m){
+				if(a[j].name>a[j+1].name){
+					t=a[j];
+					a[j]=a[j+1];
+					a[j+1]=t;
+					}
+				}
+		}
+	}
+	for(int i=1;i<=n;i++)
+		cout<<a[i].name<<" "<<a[i].m<<endl;
+	return 0;
+}

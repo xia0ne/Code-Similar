@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main ()
+{
+	int i=0;
+	char a[100];
+	char b[100];
+	int x=0,y=0,j,z=0; 
+	scanf ("%c",&a[i]);
+	while (a[i]!='\n')
+	{	
+		i++;
+		scanf ("%c",&a[i]);
+
+		if (a[i]!='\n')
+		x++;
+	}
+	i=0;
+	scanf ("%c",&b[i]);
+	while (b[i]!='\n')
+	{
+		i++;
+		scanf ("%c",&b[i]);
+		if (b[i]!='\n')
+		y++;
+	}
+	for (i=0;i<x;i++)
+	{
+		for (j=0;j<y;j++)
+		{
+			if (b[j]==a[i])
+			{
+				b[j]=0;
+				a[i]=0;
+				z++;
+				break;
+			}
+		}
+	}
+	if (z==x)
+	printf ("Yes");
+	else
+	printf ("No");
+	return 0;
+ }

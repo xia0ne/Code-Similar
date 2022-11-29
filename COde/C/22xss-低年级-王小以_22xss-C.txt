@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{  char str[9][9],pls[9][9];
+   int i,s=1; 
+   for(i=0;i<8;i++)
+     scanf("%s",str[i]);
+   for(i=0;i<8;i++)
+     scanf("%s",pls[i]);
+   
+   for(i=0;i<8;i++)
+   {
+   if(strcmp(str[i],pls[i])!=0)
+     s*=0;
+   else
+     s*=1;  }
+   if(s==0)
+     printf("YES");
+   if(s==1)
+     printf("NO");  
+   return 0;
+}

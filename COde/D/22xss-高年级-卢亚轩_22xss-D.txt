@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string> 
+using namespace std;
+struct symbol{
+	string s;
+	int lei;
+	int chi;
+};
+int main(){
+	int n;
+	cin>>n;
+	int i = 0;
+	int j = 0;
+	symbol a[n];
+	for(i = 0;i<n;i++){
+		cin>>a[i].s  >>a[i].lei >>a[i].chi;
+	}
+	
+	for(i = 0;i<n;i++){
+		for(j = i+1;j<n;j++){
+		if((10*a[i].lei+a[i].chi)<(10*a[j].lei+a[j].chi)){
+				symbol t = a[i];
+				a[i] = a[j];
+				a[j] = t;
+		}
+		else if((10*a[i].lei+a[i].chi)==(10*a[j].lei+a[j].chi)){
+			if(a[i].s>a[j].s){
+				symbol t = a[i];
+					a[i] = a[j];
+ 					a[j] = t;
+		}
+		
+		
+	}
+}
+}
+	for(i = 0;i<n;i++){
+		cout<<a[i].s<<" "<<a[i].lei*10+a[i].chi<<endl;
+	}
+	return 0; 
+}

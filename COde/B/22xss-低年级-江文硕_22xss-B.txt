@@ -1,0 +1,28 @@
+#include <iostream>
+#include<vector>
+#include <string>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	string cont;
+	string news;
+	cin >> cont;
+	cin >> news;
+	int arr[27] = { 0 };
+	int arrn[27] = { 0 };
+	for (int i = 0; i <= cont.size() - 1; i++)
+		arr[(int)cont[i] -(int) 'a' + 1]++;
+	for (int i = 0; i <= news.size() - 1; i++)
+		arrn[(int)news[i] - (int)'a' + 1]++;
+	for (int i = 1; i <= 26; i++)
+	{
+		if (arrn[i] < arr[i])
+		{
+			cout << "No";
+			return 0;
+		}
+	}
+	cout << "Yes";
+
+}

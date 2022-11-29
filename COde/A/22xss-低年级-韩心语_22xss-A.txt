@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{ int n;int a=20,b=7,c=6,d=3,e=41;
+  scanf("%d",&n);
+  if(n==1)
+  printf("%d",a);
+  if(n==2)
+  printf("%d",b);
+  if(n==3)
+    printf("%d",c);	
+	if(n==4)
+    printf("%d",d);	
+	if(n==5)
+    printf("%d",e);	
+    if(n==6)
+    printf("I love ACM!");	
+    return 0;
+}

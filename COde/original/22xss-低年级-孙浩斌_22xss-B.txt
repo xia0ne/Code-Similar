@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+#define ll long long
+int ab1[300],ab2[300];char a[200],b[200];
+int main(){
+    cin>>a;
+    for(int i=0;i<strlen(a);i++){
+        if('a'<=a[i]&&a[i]<='z'){
+            ab1[a[i]]++;
+        }
+    }
+    cin>>b;
+    for(int i=0;i<strlen(b);i++){
+        if('a'<=b[i]&&b[i]<='z'){
+            ab2[b[i]]++;
+        }
+    }
+    for(int i='a';i<='z';i++){
+        if(ab2[i]<ab1[i]){
+            printf("No\n");
+            return 0;
+        }
+    }
+    printf("Yes\n");
+    return 0;
+}

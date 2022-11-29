@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+int main() {
+int n;
+cin>>n;
+string s[n],s1;
+int a[n],b[n],c,p[n];
+for(int i=0;i<n;i++)
+{
+cin>>s[i]>>a[i]>>b[i];
+p[i]=a[i]*10+b[i];
+}
+for(int i=0;i<n;i++)
+{
+	for(int j=0;j<n;j++)
+	{
+	
+	if(p[i]>p[j])
+	{
+		s1=s[i];s[i]=s[j];s[j]=s1;
+		c=p[i];p[i]=p[j];p[j]=c;	
+	}
+	if(p[i]==p[j])
+	{
+		if(s[i]<s[j])
+		{
+		s1=s[i];s[i]=s[j];s[j]=s1;
+		c=p[i];p[i]=p[j];p[j]=c;
+	}
+	}
+	}
+}
+for(int i=0;i<n;i++)
+{
+	cout<<s[i]<<" "<<p[i]<<endl;
+	}	
+return 0;
+}

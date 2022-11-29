@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main() {
+	string a;
+	string b;
+	cin >> a;
+	cin >> b;
+	for (int i = 0; i < a.size(); i++) {
+		for (int j = 0; j < b.size(); j++) {
+			if (a[i] == b[j]) {
+				b[j] = ' ';
+				a[i] = ' ';
+				break;
+			}
+		}
+	}
+	int f = 0;
+	for (int i = 0; i < a.size(); i++) {
+		if (a[i] != ' ') {
+			cout << "No";
+			f = 1;
+			break;
+		}
+	}
+	if (f == 0) {
+		cout << "Yes";
+	}
+	return 0;
+}

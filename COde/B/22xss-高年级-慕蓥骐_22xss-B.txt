@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+const int M=1e2+5;
+int a[M],b[M];
+int main()
+{
+ 
+	string n,m;
+	cin>>n>>m;
+	for(int i=0;i<n.size();i++)
+		a[n[i]-'a']++;
+	for(int i=0;i<m.size();i++)
+		b[m[i]-'a']++;	
+	for(int i=0;i<30;i++)
+	{
+		if(a[i]>b[i])
+		{
+			cout<<"No"<<endl;
+			return 0;
+		}
+	}	
+	cout<<"Yes"<<endl;
+	return 0;
+}

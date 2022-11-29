@@ -1,0 +1,37 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+	int n;
+	cin >> n;
+	struct stdata {
+		string name;
+		int lh;
+		int ch;
+		int dif;
+	};
+	stdata st[1000];
+	for (int i = 0; i < n; i++) {
+		cin >> st[i].name >> st[i].lh >> st[i].ch;
+		st[i].dif = st[i].lh * 10 + st[i].ch;
+	}
+	for (int i = 0; i < n; i++) {
+		for (int j = i+1; j < n; j++) {
+			if (st[i].dif < st[j].dif) {
+				swap(st[i],st[j]);
+			}
+			if (st[i].dif == st[j].dif) {
+				int k = 0;
+				while (st[i].name[k] == st[j].name[k]) {
+					k++;
+				}
+				if (st[i].name[k] > st[j].name[k]) {
+					swap(st[i], st[j]);
+				}
+			}
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		cout << st[i].name << " " << st[i].dif << endl;
+	}
+}

@@ -1,0 +1,65 @@
+#include<stdio.h>
+int sushu(int a)
+{
+	int b;
+	for(b=2;b<a;b++)
+	{if(a%b==0)
+	return 0;
+	}
+	return 1;
+}
+
+int main()
+{
+	int T;
+	scanf("%d",&T);
+
+    if (T == 1) {
+    int a=0,b=0;
+	while(a<100)
+	{
+		if(a/10==6||a%10==6)
+		b=b+1;
+		if(a/10==6&&a%10==6)
+		b=b+1;
+		a++;
+	}
+	printf("%d",b);
+	return 0;
+     }
+	else if (T == 2) {
+    int a,b,c;
+	a=6+666;
+	b=a%7;
+	if(b==0)
+	printf("7");
+	else
+	printf("%d",b);
+	return 0;
+    } 
+	else if (T == 3) {
+    printf("6");
+    return 0;
+    } else if (T == 4) { 
+	printf("3");
+	return 0;
+    } 
+    else if (T == 5) {
+    int a,b=0,c=0,d;
+	a=105;
+	c=c+a%10;
+	a=a/10;
+	b=a%10;
+	c=c+b*6;
+	a=a/10;
+	d=a%10;
+	c=c+36*d;
+	printf("%d",c);
+	return 0;
+    } 
+    else if (T == 6) {
+    printf("I love ACM!");
+    return 0;
+}
+return 0;
+}

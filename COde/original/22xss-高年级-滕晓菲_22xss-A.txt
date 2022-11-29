@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	int i;
+	cin >> i;
+	if(i==1){
+		cout << "20" <<endl;
+		//6 16 26 36 46 56 60 61 6263 64 65 66 67 68 69 76 86 96 
+	}else if(i==2){
+		cout << "7" <<endl;
+		//666/7=95...1
+	}else if(i==3){
+		cout << "6" << endl;
+		//期望扔多少次得到 
+	}else if(i==4){
+		cout << "3" << endl;
+		// 2 3 5
+	}else if(i==5){
+		cout << "41" << endl;
+		//105  6^0*5+6^2*1=5+36=41
+	}else if(i==6){
+		cout << "I love ACM!"<<endl;
+	}
+	return 0;
+}

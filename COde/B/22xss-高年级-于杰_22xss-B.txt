@@ -1,0 +1,96 @@
+#include<iostream>
+#include<algorithm>
+#include<string>
+#include<cstring>
+#include<set>
+using namespace std;
+void cov(int a[],char t){
+	if(t=='a'){
+		a[0]++;
+	}else if(t=='b'){
+		a[1]++;
+	}else if(t=='c'){
+		a[2]++;
+	}else if(t=='d'){
+		a[3]++;
+	}else if(t=='e'){
+		a[4]++;
+	}else if(t=='f'){
+		a[5]++;
+	}else if(t=='g'){
+		a[6]++;
+	}else if(t=='h'){
+		a[7]++;
+	}else if(t=='i'){
+		a[8]++;
+	}else if(t=='j'){
+		a[9]++;
+	}else if(t=='k'){
+		a[10]++;
+	}else if(t=='l'){
+		a[11]++;
+	}else if(t=='m'){
+		a[12]++;
+	}else if(t=='n'){
+		a[13]++;
+	}else if(t=='o'){
+		a[14]++;
+	}else if(t=='p'){
+		a[15]++;
+	}else if(t=='q'){
+		a[16]++;
+	}else if(t=='r'){
+		a[17]++;
+	}else if(t=='s'){
+		a[18]++;
+	}else if(t=='t'){
+		a[19]++;
+	}else if(t=='u'){
+		a[20]++;
+	}else if(t=='v'){
+		a[21]++;
+	}else if(t=='w'){
+		a[22]++;
+	}else if(t=='x'){
+		a[23]++;
+	}else if(t=='y'){
+		a[24]++;
+	}else if(t=='z'){
+		a[25]++;
+	}
+}
+int main()
+{
+	string p1,p2;
+	cin>>p1>>p2;
+	int *a=new int [26];
+	int *b=new int [26];
+	for(int i=0;i<26;i++){
+		a[i]=0;
+		b[i]=0;
+	}
+	for(int i=0;i<p1.size();i++){
+		cov(a,p1[i]);
+	}
+	for(int i=0;i<p2.size();i++){
+			cov(b,p2[i]);
+    }
+    bool yj=true;
+    for(int i=0;i<26;i++){
+		if(a[i]>b[i]){
+			cout<<"No"<<endl;
+			yj=false;
+			break;
+		}
+	}
+	if(yj){
+		cout<<"Yes"<<endl;
+	}
+//	for(int i=0;i<26;i++){
+//		cout<<a[i]<<" ";
+//	}
+//	for(int i=0;i<26;i++){
+//			cout<<b[i]<<" ";
+//		}
+	return 0;
+}

@@ -1,0 +1,39 @@
+#include<iostream>
+#include<algorithm>
+#include<cstring>
+using namespace std;
+int main(){
+  string m,b;
+  cin>>m>>b;
+  const char *sa = m.c_str();
+  const char *sb = b.c_str();
+  int longa = strlen(sa);
+  int longb = strlen(sb);
+  int i;
+  int a[130];
+  for(i=0;i<130;i++)
+    a[i]=0;//重置
+  
+  for(i=0;i<longa;i++){
+    int x = sa[i];
+    a[x]++;
+  }
+  for(i=0;i<longb;i++){
+    int y = sb[i];
+    a[y]--;
+    }
+  bool pd = true;
+  for(i=0;i<130;i++){
+    if(a[i]>0){
+      cout<<"No";
+      pd = false;
+      break;
+    }
+  }
+  if(pd==true)
+    cout<<"Yes";
+  
+  
+  
+  return 0;
+}

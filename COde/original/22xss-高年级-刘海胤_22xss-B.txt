@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int length1 = 0, length2 = 0, length3 = 0,j = 0;
+	char s1[100], s2[100];
+	for (int i = 0; i < 100; i++) {
+		char temp;
+		temp=getchar();
+		if (temp == '\n')
+			break;
+		s1[i] = temp;
+		length1++;
+	}
+	for (int i = 0; i < 100; i++) {
+		char temp;
+		temp = getchar();
+		if (temp == '\n')
+			break;
+		s2[i] = temp;
+		length2++;
+	}
+	
+	for (int i = 0; i < length1; i++) {
+		char temp = s1[i];
+		for (j = 0; j < length2; j++) {
+			if (temp == s2[j]) {
+				s1[i] = ' ';
+				s2[j] = '0';
+				break;
+			}
+		}
+		j = 0;
+	}
+	for (int i = 0; i < length1; i++) {
+		if (s1[i] == ' ')
+			length3++;
+	}
+	if (length3 == length1)
+		cout << "Yes";
+	else
+		cout << "No";
+}

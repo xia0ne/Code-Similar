@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main(){
+int T,x,s=0;
+	cin >> T;
+if (T == 1) {
+	for(int i=1;i<=100;i++){
+		x=i;
+	while(x!=0){
+		if(x%10==6)
+		s++;
+		x=x/10;
+	}}cout<<s;
+} else if (T == 2) {
+	cout<<7;
+} else if (T == 3) {
+	cout<<6;
+} else if (T == 4) {
+	cout<<3;
+} else if (T == 5) {
+	cout<<41;
+} else if (T == 6) {
+	cout<<"I love ACM!";
+}
+return 0;
+}

@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+	long long arr[16]={0};
+	int flag;
+	for(int i=0;i<16;i++)
+	{
+		scanf("%d",&arr[i]);	
+	} 
+	for(int i=0;i<8;i++)
+	{
+		flag=1;
+		if(arr[i]!=arr[i+8])
+		   {
+		    printf("YES");
+		    flag=0;
+		    break;
+		   }
+	} 
+	if(flag==1)
+	{
+		printf("NO");
+	}
+	return 0;
+}

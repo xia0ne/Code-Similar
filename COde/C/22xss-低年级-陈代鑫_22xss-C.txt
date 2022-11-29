@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+char a[9][9],b[9][9];
+int main(){
+	bool k = false;
+	for(int i = 0;i < 8;i++){
+		for(int j = 0;j < 8;j++){
+			cin >> a[i][j];
+		}
+	}
+	for(int i = 0;i < 8;i++){
+		for(int j = 0;j < 8;j++){
+			cin >> b[i][j];
+		}
+	}
+	for(int i = 0;i < 8;i++){
+		for(int j = 0;j < 8;j++){
+			if(a[i][j] != b[i][j]){
+				k = true;
+			}
+		}
+	}
+	if(k == true){
+		printf("YES");
+	}else{
+		printf("NO");
+	}
+	return 0;
+}

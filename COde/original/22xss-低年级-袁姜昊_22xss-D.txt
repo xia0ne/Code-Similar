@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+#include<iostream>
+#include<string>
+#include<algorithm>
+#include<cstdio>
+using namespace std;
+
+struct picture
+{
+	char a[20];
+	int b, c;
+	int sum = 0;
+};
+
+int cmp(string, string);
+struct picture m[1001];
+bool compare(const picture &s1,const picture &s2)
+{
+	if (s1.sum != s2.sum)
+	{
+		return s1.sum > s2.sum;
+	}
+	if(s1.sum == s2.sum)
+	{
+		return strcmp(s1.a, s2.a) < 0;
+	}
+}
+
+int main()
+{
+	picture m[1001];
+	int n;
+	cin >> n;
+	for (int i = 1; i <= n; i++)
+	{
+		cin >> m[i].a >> m[i].b >> m[i].c;
+	}
+	for (int i = 1; i <= n; i++)
+	{
+		m[i].sum = m[i].c + (m[i].b) * 10;
+	}
+	sort(m + 1, m + 1 + n, compare);
+
+	for (int i = 1;i <n+1; i++)
+	{
+		cout << m[i].a << " " << m[i].sum << endl;
+
+	}
+	return 0;
+}

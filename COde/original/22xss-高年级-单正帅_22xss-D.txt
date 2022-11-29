@@ -1,0 +1,40 @@
+#include <iostream>
+#include <cstring>
+#include <algorithm>
+using namespace std;
+struct Mark
+{
+    string name;
+    int lie;
+    int chi;
+    int number;
+};
+Mark mark[1000];
+int comparator(Mark a, Mark b)
+{
+    if (a.number == b.number)
+    {
+        return a.name < b.name;
+    }
+    else
+        return a.number > b.number;
+}
+
+int main(int argc, char const *argv[])
+{
+    int n;
+    //freopen("4.in", "r", stdin);
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> mark[i].name >> mark[i].lie >> mark[i].chi;
+        mark[i].number = 10 * mark[i].lie + mark[i].chi;
+    }
+    sort(mark, mark + n, comparator);
+    for (int i = 0; i < n; i++)
+    {
+        cout << mark[i].name << " " << mark[i].number << endl;
+    }
+
+    return 0;
+}

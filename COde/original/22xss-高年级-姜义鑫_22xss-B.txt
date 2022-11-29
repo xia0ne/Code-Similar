@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+  char a[100],b[100];
+  int num1[26]={0};int num2[26]={0};
+  char c;
+  scanf("%s",a);scanf("%s",b);
+  for(int i=0;i<strlen(a);i++)
+  {int k=a[i]-'a';num1[k]++;}
+  for(int i=0;i<strlen(b);i++)
+  {int k=b[i]-'a';num2[k]++;}
+  int d=1;
+  for(int i=0;i<26;i++)
+    if(num1[i]>num2[i])
+    {d=0;break;}
+  if(d) printf("Yes");
+  else printf("No");
+  return 0;
+}

@@ -1,0 +1,63 @@
+#include<stdio.h>
+int main()
+{
+	int i,x,y,n=0;
+	int b=6,c=666,d=0;
+	int e,f=0;
+	int g,h;
+	int j=105,k,l,m,s,o,p,q,r=0;
+    int T;
+    scanf("%d", &T);
+    if (T == 1) 
+    {
+	    for(i=1;i<=100;i++)
+	    {
+		    x=i%10;
+		    y=(i/10)%10;
+		    if(x==6)
+		    n++;
+		    if(y==6)
+		    n++;	
+	    }
+	    printf("%d",n);
+	}
+    else if (T == 2) 
+	{
+    	d=(b%7)+(666%7);
+    	printf("%d",d);
+	}
+    else if (T == 3)
+	{
+		printf("6");
+	}
+    else if (T == 4)
+	{
+	    for(g=1;g<=6;g++)
+	    {
+		    for(h=2;h<=g-1;h++)
+		    {
+			    if(g%h==0)
+			    break;
+		    }
+		if(h==g)
+		n++;
+		}
+		printf("%d",n);
+    } 
+	else if (T == 5)
+	{
+	    k=j%10;
+	    l=(j/10)%10;
+	    m=j/100;
+	    s=k*1;
+	    p=l*6;
+	    q=m*6*6;
+	    r=s+p+q;
+	    printf("%d",r);
+    } 
+    else if (T == 6)
+	{
+	 	printf("I love ACM!");  
+    }
+return 0;
+}

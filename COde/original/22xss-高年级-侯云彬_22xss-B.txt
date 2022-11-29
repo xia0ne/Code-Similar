@@ -1,0 +1,33 @@
+# include<iostream>
+using namespace std;
+int main()
+{
+	char c[100];
+	char c1[100];
+	cin >>c;
+	cin >> c1;
+	int sum=0;
+	int x1=0;
+	while(c[x1]>='a'&&c[x1]<='z')
+		x1++;
+	int x2=0;
+	while(c1[x2]>='a'&&c1[x2]<='z')
+		x2++;
+	for(int i=0;i<x1; i++)
+	{
+		for(int j=0;j<x2;j++)
+		{
+			if(c[i]==c1[j])
+			{
+				sum++;
+				c1[j]='#';
+				break;
+			}
+		}
+	}
+	if(sum==x1)
+	cout<<"Yes";
+	else
+	cout<<"No";
+return 0;
+}

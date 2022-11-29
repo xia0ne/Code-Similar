@@ -1,0 +1,44 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+struct a{
+	string s;
+	long long k; 
+};
+bool comp(struct a a3,struct a a2){
+	if(a3.k>a2.k)return true;
+	else if(a3.k<a2.k)return false;
+	else if(a3.k==a2.k){
+/*		for(int i=0;;i++){
+			if(a3.s[i]<97&&a2.s[i]<97&&a3.s[i]<a2.s[i])return true;
+			else if(a3.s[i]<97&&a2.s[i]<97&&a3.s[i]>a2.s[i])return false;
+			else if(a3.s[i]<97&&a2.s[i]>97&&a3.s[i]<a2.s[i]-32)return true;
+			else if(a3.s[i]<97&&a2.s[i]>97&&a3.s[i]>a2.s[i]-32)return false;
+			else if(a3.s[i]>97&&a2.s[i]<97&&a3.s[i]-32<a2.s[i])return true;
+			else if(a3.s[i]>97&&a2.s[i]<97&&a3.s[i]-32<a2.s[i])return false;
+			else if(a3.s[i]>97&&a2.s[i]>97&&a3.s[i]-32<a2.s[i])return true;
+			else if(a3.s[i]>97&&a2.s[i]>97&&a3.s[i]-32<a2.s[i])return false;
+		}*/
+		for(int i=0;;i++){
+			if(a3.s[i]<a2.s[i])return true;
+			if(a3.s[i]>a2.s[i])return false;
+		}
+	}
+	
+}
+struct a a1[1005];
+int main(){
+	int n,c,d;
+	int i;
+	cin>>n;
+	for(i=0;i<n;i++){
+		cin>>a1[i].s>>c>>d;
+//		cout<<c<<d;
+		a1[i].k=c*10+d;
+	} 
+	sort(a1,a1+n,comp);
+	for(i=0;i<n;i++){
+		cout<<a1[i].s<<" "<<a1[i].k<<endl;
+	}
+	return 0;
+}

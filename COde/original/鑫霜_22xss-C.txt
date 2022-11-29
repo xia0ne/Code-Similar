@@ -1,0 +1,33 @@
+#include<iostream>
+
+using namespace std;
+
+string s1[10];
+string s2[10];
+
+int main(){
+	for(int i = 0; i < 8; i++){
+		cin >> s1[i];
+	}
+	
+	for(int i = 0; i < 8; i++){
+		cin >> s2[i];
+	}
+	
+	int flag = 0;
+	for(int i = 0; i < 8; i++){
+		for(int j = 0; j < 8; j++){
+			if(s1[i][j] != s2[i][j]){
+				flag = 1;
+				cout << "YES" << endl;
+				break;
+			}
+		}
+		if(flag == 1) break; 
+	}
+	if(!flag){
+		cout << "NO" << endl;
+	}
+	
+	return 0;
+}

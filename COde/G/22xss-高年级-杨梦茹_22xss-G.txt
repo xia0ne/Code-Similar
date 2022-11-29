@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+struct q{
+   int key;
+   int value;
+}qm[1000005];
+bool comp(q q1,q q2){
+
+    return q1.value<q2.value;
+}
+int main()
+{
+    int n,m,h,w,ans=0;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+      scanf("%d",&m);
+      qm[i].key=i;
+      qm[i].value=m;
+    }
+    sort(qm+1,qm+n+1,comp);
+    long long sum=0,sum2=0;
+    for(int i=1;i<=n;i++){
+        sum+=qm[i].key;
+        sum2+=i;
+        if(sum==sum2){
+            ans++;sum=0;sum2=0;
+        }
+    }
+    printf("%d",ans);
+    return 0;
+}

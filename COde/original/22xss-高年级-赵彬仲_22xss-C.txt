@@ -1,0 +1,30 @@
+#include<iostream>
+// 填上你觉得需要的其他头文件
+using namespace std;
+int main() {
+    char a[8][8];
+    char b[8][8];
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            cin >> a[i][j];
+        }
+    }
+    int p = 0;
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            cin >> b[i][j];
+        }
+    }
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+            if (b[i][j] != a[i][j]) {
+                p = 1;
+            }
+        }
+    }
+
+    
+    if (p==0) cout << "NO";
+    else cout << "YES";
+    return 0;
+}

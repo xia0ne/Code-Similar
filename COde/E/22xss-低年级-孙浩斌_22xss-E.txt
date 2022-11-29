@@ -1,0 +1,33 @@
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+#include<algorithm>
+#include<set>
+using namespace std;
+#define ll long long
+set<int> s;
+int main(){
+    int n,cnt=0;
+    scanf("%d",&n);
+    int a;
+    for(int i=1;i<=n;i++){
+        scanf("%d",&a);
+        if(a==0){
+            cnt++;
+        }
+        else if(a==1)
+            continue;
+        else{
+            s.insert(a);
+        }
+    }
+    if(cnt>=2){
+        printf("0\n");
+    }
+    else if(cnt==1){
+        printf("1\n");
+    }
+    else
+        printf("%d\n",s.size());
+    return 0;
+}

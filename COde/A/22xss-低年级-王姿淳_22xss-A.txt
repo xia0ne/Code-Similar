@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main(void)
+{
+	int T;
+	int i,cnt=0,day=0;
+	char number[300],str[5];
+	scanf("%d",&T);
+	if(T==1){
+		for(i=1;i<=100;i++){
+			sprintf(str,"%d",i);
+			strcat(number,str);
+		}
+		for(i=1;i<300;i++){
+			if(number[i]=='6')
+				cnt++;
+		}printf("%d\n",cnt);
+	}
+	else if(T==2){
+		day=666%7;
+		if(day<=1){
+			day+=6;
+		}else{
+			day-=1;
+		}printf("%d\n",day);
+	}
+	else if(T==3){
+		printf("%d\n",6);
+	}
+	else if(T==4){
+		printf("%d\n",3);
+	}
+	else if(T==5){
+		printf("%d\n",41);
+	}
+	else if(T==6){
+		printf("I love ACM!");
+	}return 0;
+}

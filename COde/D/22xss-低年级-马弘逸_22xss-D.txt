@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+#include<string>
+
+#include<algorithm>
+
+#include<cmath>
+
+class mark {
+public:
+	bool operator<(mark& m) {
+		if (this->x != m.x) {
+			return this->x > m.x;
+		}
+		else if (this->x == m.x) {
+			int s = this->str.size() < m.str.size() ? this->str.size() : m.str.size();
+			//int s2= this->str.size() > m.str.size() ? this->str.size() : m.str.size();
+			for (int i = 0; i < s; i++) {
+				if (this->str[i] != m.str[i]) {
+					return this->str[i] < m.str[i];
+				}
+			}
+		}
+	}
+
+	string str;
+	int x;
+};
+
+
+int main() {
+	mark m[1005];
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> m[i].str;
+		int a, b;
+		cin >> a >> b;
+		m[i].x = a * 10 + b;
+	}
+	sort(m, m + n);
+	for (int i = 0; i < n; i++) {
+		cout << m[i].str << " " << m[i].x << endl;
+	}
+	return 0;
+}

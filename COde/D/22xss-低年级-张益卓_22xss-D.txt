@@ -1,0 +1,54 @@
+#include <stdio.h>
+struct st
+{
+	char arr[10];
+	int a10;
+	int b;
+};
+int cmp(const void* p1, const void* p2)
+{
+	int num1 = ((struct st*)p1)->a10 * 10 + ((struct st*)p1)->b;
+	int num2 = ((struct st*)p2)->a10 * 10 + ((struct st*)p2)->b;
+	return num2 - num1;
+}
+int cmp_name(const void* p1, const void* p2)
+{
+	return strcmp(((struct st*)p1)->arr, ((struct st*)p2)->arr);
+}
+int main()
+{
+	int num = 0;
+	scanf("%d", &num);
+	struct st* src=(struct st*)calloc(num,sizeof(struct st));
+	int i = 0;
+	for (i = 0; i < num; i++)
+	{
+		scanf("%s%d%d", src[i].arr, &(src[i].a10), &(src[i].b));
+	}
+	qsort(src, num, sizeof(src[0]), cmp);
+	int count = 0;
+	int tmp = 0;
+	for (i = 0; i < num-1; i++)
+	{
+		tmp = 0;
+		if (((src[i].a10) * 10 + src[i].b) == ((src[i + 1].a10) * 10 + src[i + 1].b))
+		{
+			count++;
+		}
+		else
+		{
+			tmp = 1;
+		}
+		if (tmp == 1)
+		{
+			qsort(src + i - count, count + 1,sizeof(src[0]), cmp_name);
+			count = 0;
+		}
+
+	}
+	for (i = 0; i < num; i++)
+	{
+		printf("%s %d\n", src[i].arr, ((src[i].a10) * 10 + src[i].b));
+	}
+	return 0;
+}

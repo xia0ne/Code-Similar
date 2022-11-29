@@ -1,0 +1,58 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+/**ans1 = 20;
+ans2= 7;
+ans3 = 6;
+ans4 = 3;
+ans5 = 41;
+ans6 = I love ACM!;
+*/
+char a[200][22];
+char b[200][22];
+
+
+
+typedef struct _s
+{
+    int a, b;
+    int sum;
+    string s;
+}S;
+
+bool cmp(S s1, S s2){
+    if(s1.sum != s2.sum) {
+        return s1.s < s2.s;
+    }
+    return s1.sum > s2.sum;
+}
+
+int main()
+{
+    S she[2000];
+    int n;
+    cin >> n;
+    for(int i = 0; i < n; i++){
+        cin >> she[i].s >> she[i].a >> she[i].b;
+        she[i].sum = she[i].a * 10 +she[i].b;
+    }
+
+    //sort(she, she + n, cmp);
+    for(int i = 0; i < n - 1; i++){
+        for(int j = 0; j < n - i - 1; j++){
+            if(she[j].sum == she[j + 1].sum){
+                if(she[j].s > she[j + 1].s) swap(she[j],she[j + 1]);
+            }else if(she[j].sum < she[j + 1].sum) swap(she[j], she[j + 1]);
+        }
+    }
+
+
+    for(int i = 0; i < n; i++){
+        cout << she[i].s << ' ' << she[i].sum << endl;
+    }
+
+
+    return 0;
+}

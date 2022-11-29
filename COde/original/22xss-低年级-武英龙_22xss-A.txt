@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+	int p;
+	scanf("%d",&p);
+	if(p==1)printf("20");
+	else if(p==2)printf("7");
+	else if(p==3)printf("6");
+	else if(p==4)printf("3");
+	else if(p==5)printf("41");
+	else if(p==6)printf("I love ACM!");
+	
+	
+	return 0 ;
+}

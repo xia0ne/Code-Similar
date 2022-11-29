@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+  int T;
+  int sum=0;
+  cin>>T;
+  if(T==1){
+    for(int i=10;i<100;i++)
+    {
+      if(i%10==6) sum++;
+      if((i/10)%10==6) sum++;
+    }
+    sum+=1;
+    cout<<sum;
+}
+if(T==2)
+{
+
+int s=0;
+s=666%7;
+cout<<s+6;
+}
+if(T==3)
+{
+	cout<<6;
+}
+if(T==4)
+{
+cout<<3;
+}
+if(T==5)
+{
+	cout<<41;
+}
+if(T==6)
+{
+	printf("I love ACM!");
+}
+return 0;
+}

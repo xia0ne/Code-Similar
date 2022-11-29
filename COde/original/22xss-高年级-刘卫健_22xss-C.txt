@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	char a[8][8],b[8][8];
+	int i,j;
+	for(i=0;i<8;i++)scanf("%s",a[i]);
+	for(i=0;i<8;i++)scanf("%s",b[i]);
+	bool flag = true;
+	for(i=0;i<8;i++){
+		for(j=0;j<8;j++){
+			if(a[i][j]!=b[i][j]){
+				flag = false; 
+				break;
+			}
+		}
+		if(!flag)break;
+	}
+	if(!flag)cout<<"YES";
+	else cout<<"NO";		
+	
+}

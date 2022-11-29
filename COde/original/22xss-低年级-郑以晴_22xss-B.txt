@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char str1[101],str2[101];
+	int cnt1[100]={0},cnt2[100]={0};
+	scanf("%s%s",str1,str2);
+	int la=strlen(str1);
+	int lb=strlen(str2);
+	for(int i=0;i<=la;i++){
+		str1[i]=str1[i]-'a';
+		cnt1[str1[i]]++;
+	}
+	for(int i=0;i<=lb;i++){
+		str2[i]=str2[i]-'a';
+		cnt2[str2[i]]++;
+	}
+	int k=0;
+	for(int i=0;i<26;i++){
+		if(cnt1[i]<=cnt2[i])
+		k++;
+	}
+	    if(k>=25)
+		printf("Yes\n");
+		else printf("No\n");
+	return 0;
+}

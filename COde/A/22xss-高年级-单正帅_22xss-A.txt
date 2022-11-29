@@ -1,0 +1,62 @@
+#include <iostream>
+// 填上你觉得需要的其他头文件
+using namespace std;
+int main()
+{
+    int T;
+    cin >> T;
+    if (T == 1)
+    {
+        // 请自行完成问题 1 的代码
+        int count = 0;
+        for (int i = 1; i < 101; i++) //测试
+        {
+            int j = i;
+            while (j != 0)
+            {
+                int t = j % 10;
+                if (t == 6)
+                {
+                    count++;
+                }
+                j = j / 10;
+            }
+        }
+        cout << count;
+    }
+    else if (T == 2)
+    {
+        // 请自行完成问题 2 的代码
+        int day = 6;
+        for (int i = 0; i < 666; i++)
+        {
+            if (day == 7)
+            {
+                day = 0;
+            }
+            day++;
+        }
+        cout << day;
+    }
+    else if (T == 3)
+    {
+        // 请自行完成问题 3 的代码
+        cout << 6;
+    }
+    else if (T == 4)
+    {
+        // 请自行完成问题 4 的代码
+        cout << 3;
+    }
+    else if (T == 5)
+    {
+        // 请自行完成问题 5 的代码
+        cout << 41;
+    }
+    else if (T == 6)
+    {
+        // 请自行完成问题 6 的代码
+        cout << "I love ACM!";
+    }
+    return 0;
+}

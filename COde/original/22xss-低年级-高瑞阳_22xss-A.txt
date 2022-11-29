@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+	int T,d,n;
+	scanf("%d", &T);
+	if (T == 1)
+	{
+			printf("20");
+	}
+	else if (T == 2)
+	{
+		d = 666 % 7;
+		if (d <= 1)
+			n = 6 + d;
+		else
+			n = d - 1;
+		printf("%d", n);
+	}
+	else if (T == 3)
+	{
+		printf("6");
+	}
+	else if (T == 4)
+	{
+		printf("3");
+	}
+	else if (T == 5)
+	{
+		printf("41");
+	}
+	else if (T == 6)
+	{
+		printf("I love ACM!");
+	}
+	return 0;
+}

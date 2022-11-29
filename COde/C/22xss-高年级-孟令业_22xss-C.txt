@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    string a[8];
+    string b[8];
+    for (int i = 0; i < 8; i++) {
+            cin >> a[i];
+    }
+    for (int i = 0; i < 8; i++) {
+        cin >> b[i];
+    }
+    int t=0;
+    for (int i = 0; i < 8; i++) {
+        if(a[i]!=b[i]) {
+            t=1;
+            break;
+        }
+    }
+    if(t==1)    cout<<"YES";
+    else cout<<"NO";
+
+}

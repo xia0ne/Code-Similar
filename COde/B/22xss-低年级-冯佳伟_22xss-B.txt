@@ -1,0 +1,22 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main(){
+    string a,b;
+	int k=0;
+	cin>>a>>b;
+	for(int i=1;i<=(int)a.length();i++){
+        for(int j=1;j<=(int)b.length();j++){
+			if(a[i]==b[j]){
+				k=k+1;
+				b.erase(j,1);
+			    break;
+			}
+		}
+	}
+	if(k==(int)a.length())
+		printf("Yes");
+	else
+		printf("No");
+	return 0;
+}

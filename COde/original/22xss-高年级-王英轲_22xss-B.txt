@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main() {
+char *a=new char[100];
+char *b=new char[100];
+int t=0,f=0;
+for(int i=0;i<100;i++){
+	char n;
+	n=getchar();
+	if(n=='\n')
+	break;
+	else {
+	a[i]=n;t++;
+    }
+}
+for(int i=0;i<100;i++){
+	char n;
+	n=getchar();
+	if(n=='\n')
+	break;
+	else {
+	b[i]=n;f++;
+    }
+}
+int d=0;
+for(int i=0;i<t;i++){
+	int p=0;
+	for(int j=0;j<f;j++){
+	if(a[i]==b[j]){
+		p=1;
+		b[j]=0;break;
+	}
+}
+	if(p==0) {
+		cout<<"No";
+		d=1;
+		break;
+	}
+}
+if(d==0) cout<<"Yes";
+return 0;
+}

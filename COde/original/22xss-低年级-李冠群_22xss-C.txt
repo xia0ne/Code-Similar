@@ -1,0 +1,41 @@
+#include <stdio.h>
+int main() {
+	double a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p;
+	scanf("%lf",&a);
+	getchar();
+	scanf("%lf",&b);
+	getchar();
+	scanf("%lf",&c);
+	getchar();
+	scanf("%lf",&d);
+	getchar();
+	scanf("%lf",&e);
+	getchar();
+	scanf("%lf",&f);
+	getchar();
+	scanf("%lf",&g);
+	getchar();
+	scanf("%lf",&h);
+	getchar();
+	scanf("%lf",&i);
+	getchar();
+	scanf("%lf",&j);
+	getchar();
+	scanf("%lf",&k);
+	getchar();
+	scanf("%lf",&l);
+	getchar();
+	scanf("%lf",&m);
+	getchar();
+	scanf("%lf",&n);
+	getchar();
+	scanf("%lf",&o);
+	getchar();
+	scanf("%lf",&p);
+	getchar();
+	if (i==a&&j==b&&k==c&&l==d&&m==e&&n==f&&o==g&&p==h)
+	printf("NO");
+	else
+	printf("YES");
+		return 0;
+}

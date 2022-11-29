@@ -1,0 +1,30 @@
+#include <iostream>
+#include <map>
+#include <algorithm>
+#define ll long long
+using namespace std;
+
+struct str{
+	string s;
+	ll a,b;
+}st[1010];
+
+bool cmp(str s1,str s2){
+	ll x = s1.a*10+s1.b;
+	ll y = s2.a*10+s2.b;
+	if(x == y) return s1.s < s2.s;
+	return x>y;
+}
+int main(){
+	int n;
+	cin>>n;
+	for(int i=1;i<=n;i++){
+		cin>>st[i].s>>st[i].a>>st[i].b;
+	}
+	sort(st+1,st+1+n,cmp);
+	for(int i=1;i<=n;i++){
+		cout<<st[i].s<<" "<<st[i].a*10+st[i].b<<endl;
+	}
+	
+	return 0;
+}

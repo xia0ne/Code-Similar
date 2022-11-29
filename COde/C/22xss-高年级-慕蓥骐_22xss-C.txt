@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+const int M=1e2+5;
+string a[M],b[M];
+int main()
+{
+ 
+	for(int i=0;i<8;i++)
+		cin>>a[i];
+	for(int i=0;i<8;i++)
+			cin>>b[i];			
+	for(int i=0;i<8;i++)
+		if(a[i]!=b[i])
+			{
+				cout<<"YES"<<endl;
+					return 0;
+			}
+	cout<<"NO"<<endl;		
+	return 0;
+}

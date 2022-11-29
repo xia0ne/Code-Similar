@@ -1,0 +1,22 @@
+# include<iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cin>>n;
+	//6 16 26 36 46 56 60
+	//61 62 63 64 65 66 67 68 69 76 86 96
+	if(n==1) 
+	cout<<"20";
+	if(n==2)
+	cout<<7;
+	if(n==3)
+	cout<<6;
+	if(n==4)
+	cout<<3;
+	if(n==5)
+	cout<<"41";
+	if(n==6)
+	cout<<"I love ACM!";
+  return 0;
+}

@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int T;
+	cin >> T;
+	if (T == 1) 
+	{
+			cout << 20<< endl;
+	}
+	else if (T == 2) {
+		cout << 7<< endl;
+	}
+	else if (T == 3) {
+		cout << 6<< endl;
+	}
+	else if (T == 4) {
+		cout << 3 << endl;
+	}
+	else if (T == 5) {
+		cout << 41 << endl;
+	}
+	else if (T == 6) {
+		cout << "I love ACM!" << endl;
+	}
+	return 0;
+}

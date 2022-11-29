@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+	int i=0,j=0,flag=0;
+	char a[65],b[65],c;
+	while(j<8){
+		c=getchar();
+		if(c!='\n'){
+			a[i]=c;
+			i++;
+		}else{
+			j++;
+		}
+	}
+	i=0;
+	j=0;
+	while(j<8){
+		c=getchar();
+		if(c!='\n'){
+			b[i]=c;
+			i++;
+		}else{
+			j++;
+		}
+	}
+	for(i=0;i<64;i++){
+		if(a[i]!=b[i]){
+			flag=1;
+			break;
+		}
+	}
+	if(flag==1){
+		printf("YES");
+	}else{
+		printf("NO");
+	}
+	return 0;
+}

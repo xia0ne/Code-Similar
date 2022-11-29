@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<string.h> 
+int main()
+{
+	char x[101];
+	char y[101];
+	int a=0;
+	gets(x);
+	gets(y);
+	int z[2][200]={0};
+	for(int i=0;i<=strlen(x);i++){
+		for(int j=97;j<=122;j++){
+			if(x[i]==j) z[0][j]++;
+		}
+	}
+	for(int i=0;i<=strlen(y);i++){
+		for(int j=97;j<=122;j++){
+			if(y[i]==j) z[1][j]++;
+		}
+	}
+	int count=0;
+	for(int i=97;i<=122;i++){
+		if(z[1][i]>=z[0][i]) count++;
+	}
+	for(int i=97;i<=122;i++){
+		int count=0;
+	    for(int i=97;i<=122;i++){
+		if(z[1][i]>=z[0][i]) count++;
+	    }
+	}
+	if(count==26) printf("Yes");
+	else printf("No");
+	return 0;
+ }

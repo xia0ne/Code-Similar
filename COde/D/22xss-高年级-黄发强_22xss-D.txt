@@ -1,0 +1,37 @@
+# include<iostream>
+# include<string.h>
+# include<algorithm>
+
+using namespace std;
+struct aa
+{
+	char s1[100];
+	int m;
+	int n;
+}a[1005];
+bool cmp(aa qwe,aa rty)
+{
+	if(qwe.m*10+qwe.n>rty.m*10+rty.n)
+	return true;
+	else
+	if(qwe.m*10+qwe.n<rty.m*10+rty.n)
+	return false;
+	else
+	{
+		if(strcmp(qwe.s1,rty.s1)<0)
+		return true;
+		else
+		return false;
+	}
+}
+int main()
+{
+	int q;
+	cin>>q;
+	for(int i=1;i<=q;i++)
+	cin>>a[i].s1>>a[i].m>>a[i].n;
+	sort(a+1,a+1+q,cmp);
+	for(int i=1;i<=q;i++)
+	cout<<a[i].s1<<" "<<a[i].m*10+a[i].n<<"\n";	
+	return 0;
+}

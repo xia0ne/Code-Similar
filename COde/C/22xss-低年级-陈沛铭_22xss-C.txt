@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+	int a1,a2,a3,a4,a5,a6,a7,a8,d=0;
+	int b1,b2,b3,b4,b5,b6,b7,b8;
+	scanf("%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n",&a1,&a2,&a3,&a4,&a5,&a6,&a7,&a8);
+	scanf("%d\n%d\n%d\n%d\n%d\n%d\n%d\n%d\n",&b1,&b2,&b3,&b4,&b5,&b6,&b7,&b8);
+	if(a1==b1)
+	d++;
+	if(a2==b2)
+	d++;
+	if(a3==b3)
+	d++;
+	if(a4==b4)
+	d++;
+	if(a5==b5)
+	d++;
+	if(a6==b6)
+	d++;
+	if(a7==b7)
+	d++;
+	if(a8==b8)
+	d++;
+
+    if(d!=8)
+    printf("YES");
+	else printf("NO");
+	return 0;
+}

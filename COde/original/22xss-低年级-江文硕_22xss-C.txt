@@ -1,0 +1,27 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+int main()
+{
+	int a[8];
+	int b[8];
+	bool real = true;
+	for (int i = 0; i < 8; i++)
+	
+			cin >> a[i];
+	for (int i = 0; i < 8; i++)
+		
+		{
+			cin >> b[i];
+			if (b[i]!= a[i])
+				real = false;
+		}
+
+	if (!real)
+		cout << "YES";
+	else
+		cout << "NO";
+
+
+}

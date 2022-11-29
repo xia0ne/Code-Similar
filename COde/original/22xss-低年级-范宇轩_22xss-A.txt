@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+	int T = 0;
+	scanf("%d", &T);
+	switch (T)
+	{
+	case 1:
+		printf("20");
+        break;
+	case 2:
+		printf("7");
+        break;
+	case 3:
+		printf("6");
+        break;
+	case 4:
+		printf("3");
+        break;
+	case 5:
+		printf("41");
+        break;
+	case 6:
+		printf("I love ACM!");
+        break;
+	}
+	return 0;
+}

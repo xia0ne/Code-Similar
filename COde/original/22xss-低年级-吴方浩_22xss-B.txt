@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int a[26]={0},b[26]={0},lenc,lend,k,i,j;
+	char c[100],d[100];
+	j=1;
+	scanf("%s%s",c,d);
+	lenc=strlen(c);
+	lend=strlen(d);
+	for(i=0;i<lenc;i++)
+	{
+		k=c[i]-'a';
+		a[k]++;
+	}
+	for(i=0;i<lend;i++)
+	{
+		k=d[i]-'a';
+		b[k]++;
+	}
+	for(i=0;i<26;i++)
+	{
+		if(a[i]>b[i])
+		{
+			j=0;
+			break;
+		}
+	}
+	if(j)
+	{
+		printf("Yes");
+	}
+	else
+	{
+		printf("No");
+	}
+	return 0;
+ }

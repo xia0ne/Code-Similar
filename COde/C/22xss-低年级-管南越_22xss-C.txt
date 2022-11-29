@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t;
+	scanf("%d",&a);
+	scanf("%d",&b);
+	scanf("%d",&c);
+	scanf("%d",&d);
+	scanf("%d",&e);
+	scanf("%d",&f);
+	scanf("%d",&g);
+	scanf("%d",&h);
+	scanf("%d",&i);
+	scanf("%d",&j);
+	scanf("%d",&k);
+	scanf("%d",&l);
+	scanf("%d",&m);
+	scanf("%d",&n);
+	scanf("%d",&o);
+	scanf("%d",&p);
+	if(a==i&&b==j&&c==k&&d==l&&e==m&&f==n&&g==o&&h==p)
+	printf("NO");
+	else
+	printf("YES");
+	return 0;
+}

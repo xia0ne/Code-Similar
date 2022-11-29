@@ -1,0 +1,48 @@
+#include <iostream>
+#include<stdio.h>
+#include <stack>
+#include <algorithm>
+#include<math.h>
+#include<queue>
+#include<map>
+#include<vector>
+#include<cstring>
+#define ull unsigned long long
+#define ll long long
+using namespace std;
+map<string,ll>mp;
+typedef struct pd{
+	string r;
+	int c;
+};
+bool cmp(pd x,pd y){
+	if(x.c==y.c){
+		return x.r<y.r;
+	}
+	else {
+		return x.c>y.c;
+	}
+}
+int main() {
+	mp.clear();
+	int n;
+	cin>>n;
+	string s[1001];
+	pd p[1001];
+	ll a[1001],b[1001],c[1001];
+	for(int i=1;i<=n;i++){
+		cin>>s[i];
+		cin>>a[i];
+		cin>>b[i];
+	}
+	for(int i=1;i<=n;i++){
+		c[i]=a[i]*10+b[i];
+		p[i].r=s[i];
+		p[i].c=c[i];
+	}
+	sort(p+1,p+n+1,cmp);
+	for(int i=1;i<=n;i++){
+		cout<<p[i].r<<" "<<p[i].c<<endl;
+	}
+	return 0;
+}

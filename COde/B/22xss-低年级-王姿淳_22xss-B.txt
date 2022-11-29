@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<string.h>
+int cnt[30],number[30],judge[30];
+int main(void)
+{
+	char letter[110],sourse[110];
+	int i,j,k,len1,len2,isprime=1;
+	scanf("%s",letter);
+	scanf("%s",sourse);
+	len1=strlen(letter);
+	len2=strlen(sourse);
+	for(i=0;i<len1;i++){
+		k=(int)letter[i]-97;
+		cnt[k]++;
+		judge[k]=1;
+	}
+	for(j=0;j<len2;j++){
+		k=(int)sourse[j]-97;
+		number[k]++;
+	}
+	for(i=0;i<30;i++){
+		if(judge[i]==1){
+			if(cnt[i]>number[i]){
+				isprime=0;
+				break;
+			}
+		}
+	}if(isprime==1)
+		printf("Yes\n");
+	else if(isprime==0)
+		printf("No\n");
+	return 0;
+}

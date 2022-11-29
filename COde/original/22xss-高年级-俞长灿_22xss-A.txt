@@ -1,0 +1,32 @@
+#include <iostream>
+// 填上你觉得需要的其他头文件
+using namespace std;
+int main() {
+    int T;
+    cin >> T;
+    if (T == 1) {
+// 请自行完成问题 1 的代码
+        cout<<20;
+    } else if (T == 2) {
+// 请自行完成问题 2 的代码
+        int a = (6 + 666)%7;
+        if(a != 0)
+            cout<<a;
+        else
+            cout<<7;
+    } else if (T == 3) {
+// 请自行完成问题 3 的代码
+        cout<<6;
+    } else if (T == 4) {
+// 请自行完成问题 4 的代码
+        cout<<3;
+    } else if (T == 5) {
+// 请自行完成问题 5 的代码
+        int a = 1*5 + 6*0 + 36*1;
+        cout<<a;
+    } else if (T == 6) {
+// 请自行完成问题 6 的代码
+        cout<<"I love ACM!";
+    }
+    return 0;
+}

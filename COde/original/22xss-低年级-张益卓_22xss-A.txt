@@ -1,0 +1,23 @@
+int main() {
+	int T;
+	scanf("%d", &T);
+	if (T == 1) {
+		printf("%d\n", 20);
+	}
+	else if (T == 2) {
+		printf("%d\n", 7);
+	}
+	else if (T == 3) {
+		printf("%d\n", 6);
+	}
+	else if (T == 4) {
+		printf("%d\n", 3);
+	}
+	else if (T == 5) {
+		printf("%d\n", 41);
+	}
+	else if (T == 6) {
+		printf("I love ACM!");
+	}
+	return 0;
+}

@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+int main() {
+string s1;
+string s2;
+cin>>s1;
+cin>>s2;
+if(s1.size()>s2.size())
+{
+cout<<"No";
+return 0;
+}
+int i,j,k,m;
+for(i=0;i<s1.size();i++)
+{
+	for(j=0;j<s2.size();j++)
+	{
+		if(s2[j]==s1[i])
+		{
+			s2[j]='0';
+			break;
+		}
+		else
+		{
+		m=0;
+		continue;
+		}
+	}
+if(j==s2.size()&&m==0)
+{
+cout<<"No";
+break;
+}
+}
+if(i==s1.size())
+cout<<"Yes";
+return 0;
+}

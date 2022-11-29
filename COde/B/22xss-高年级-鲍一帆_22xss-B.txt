@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+/**ans1 = 20;
+ans2= 7;
+ans3 = 6;
+ans4 = 3;
+ans5 = 41;
+ans6 = I love ACM!;
+*/
+int a[200];
+int b[200];
+
+int main()
+{
+
+    string s1, s2;
+    cin >> s1 >> s2;
+    /*
+    for(size_t i = 0; i < s1.size(); i++){
+        int fin = 0;
+        for(size_t j = 0; j < s2.size(); j++){
+            if(s1[i] == s2[j]) {
+                fin = 1;
+                break;
+            }
+        }
+        if(fin == 0) {
+            flag = 0;
+            break;
+        }
+    }
+    if(flag == 1) cout << "Yes";
+    else cout << "No";
+    */
+    for(size_t i = 0; i < s1.size(); i++){
+        a[s1[i] - 'a']++;
+    }
+    for(size_t i = 0; i < s2.size(); i++){
+        b[s2[i] - 'a']++;
+    }
+    int flag = 1;
+    for(int i = 0; i < 26; i++){
+        if(a[i] > b[i]) {
+            flag = 0;
+            break;
+        }
+    }
+    if(flag == 1) cout << "Yes";
+    else cout << "No";
+    return 0;
+}

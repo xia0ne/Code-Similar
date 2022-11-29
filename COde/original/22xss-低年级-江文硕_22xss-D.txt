@@ -1,0 +1,60 @@
+#include <iostream>
+#include<vector>
+#include <string>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	int n;
+	cin >> n;
+	struct people {
+		string name;
+		int chi;
+		int lie;
+		int nandu;
+		char s ;
+	}po[1001];
+	for (int i = 1; i <= n; i++)
+	{
+		cin >> po[i].name >> po[i].lie >> po[i].chi;
+		po[i].nandu = po[i].lie * 10 + po[i].chi;
+		po[i].s = po[i].name[0];
+	}
+	int q=0;
+	for(int i =1;i<=n-1;i++)
+		for (int j = i+1; j <= n; j++)
+		{
+			if (po[i].nandu < po[j].nandu)
+				swap(po[i], po[j]);
+			if (po[i].nandu == po[j].nandu)
+			{
+				while(1)
+				{
+					if ((int)po[i].name[q] > (int)po[j].name[q])
+					{
+						swap(po[i], po[j]);
+                      q=0;
+                      
+						break;
+					}
+					else if ((int)po[i].name[q] < (int)po[j].name[q])
+                    {
+                      q=0;
+                      break;
+                    }
+					else if ((int)po[i].name[q] == (int)po[j].name[q])
+					{
+						q++;
+					}
+				}
+			}
+			
+		}
+	for (int i = 1; i <= n; i++)
+	{
+		cout << po[i].name << ' ' << po[i].nandu<<endl;
+	}
+
+
+
+}

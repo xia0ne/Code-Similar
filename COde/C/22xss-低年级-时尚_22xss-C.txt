@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+char a[8][8];
+char b[8][8];
+
+int main()
+{
+	int cnt = 0;
+	for (int i = 0; i < 8; i++)
+		{
+			for (int j = 0; j < 8; j++)
+				{
+					cin >> a[i][j];
+				}
+		}
+	for (int i = 0; i < 8; i++)
+		{
+			for (int j = 0; j < 8; j++)
+				{
+					cin >> b[i][j];
+				}
+		}
+	for (int i = 0; i < 8; i++)
+		{
+			for (int j = 0; j < 8; j++)
+				{
+					if (a[i][j] == b[i][j])
+						{
+							cnt++;
+						}
+				}
+
+		}
+	if (cnt == 64)
+		{
+			cout << "NO";
+
+		}
+	if (cnt != 64)
+		{
+			cout << "YES";
+
+		}
+}

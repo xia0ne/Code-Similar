@@ -1,0 +1,48 @@
+#include<iostream>
+#include<string.h>
+#include<math.h>
+#include<algorithm>
+using namespace std;
+struct st{
+	int id;
+	double s;
+};
+bool comp(struct st st2,struct st st3){
+	if(st2.s>=st3.s)return true;
+	else return false;
+}
+int main(){
+	int n,k,ans=0;
+	double sum,a,b,sc,asum;
+	int i,j;
+	struct st st1[10005];
+	cin>>n;
+	for(i=0;i<n;i++){
+		sum=0;
+		asum=0;
+		st1[i].id=0;
+		cin>>k;
+		for(j=0;j<k;j++){
+			cin>>a>>b;
+			sum+=a*b;
+			asum+=a; 
+			if(b<60)st1[i].id=1;
+		}
+		sum/=asum;
+		cin>>sc;
+		st1[i].s=sum*0.7+sc*0.3;
+	}
+	sort(st1,st1+n,comp);
+	for(i=0;i<round(n*0.6);i++){
+		if(st1[i].id==0&&i<round(n*0.2)){
+			ans+=800;
+//			cout<<"1"<<endl;
+		}
+		else if(st1[i].id==0){
+			ans+=400;
+//			cout<<"2"<<endl;
+		}
+	}
+	cout<<ans;
+	return 0;
+}

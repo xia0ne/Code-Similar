@@ -1,0 +1,87 @@
+#include <iostream>
+#include<vector>
+#include <string>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	struct student {
+		double zhonghe;
+		bool guake=false;
+	}po[10001];
+
+	int n;
+	cin >>n;
+	double a = n * 0.2;
+	double b = n * 0.6;
+	int eigpe;
+	int fourpe;
+	int t = n * 0.2;
+	double tq = t;
+	int y = n * 0.6;
+	double ty = y;
+	if (a-t >= 0.5)
+		eigpe = n * 0.2 + 1;
+	else
+		eigpe = n * 0.2;
+	if (b-y >= 0.5)
+	{
+		fourpe = b + 1 - eigpe;
+	}
+	else
+		fourpe = n * 0.6 - eigpe;
+	
+	for (int i = 1; i <= n; i++)
+	{
+		int k;
+		double sum = 0;
+		double sumfen=0;
+		cin >> k;
+		bool go = true;
+		for (int j = 1; j <= k; j++)
+		{
+			double fen;
+			double gra;
+			cin >> fen >> gra;
+			sum = sum + fen * gra;
+			sumfen = sumfen + fen;
+			if (gra < 60)
+				 go = false;
+		}
+		double stdfen = sum / sumfen;
+		double zhfen = 0;
+		cin >> zhfen;
+		po[i].zhonghe = zhfen * 0.3 + stdfen * 0.7;
+		if (go == false)
+			po[i].guake = true;
+	
+	
+
+	}
+	for(int i =1;i<n;i++)
+		for (int j = i; j <= n; j++)
+
+		{
+			if (po[i].zhonghe > po[j].zhonghe)
+				swap(po[i], po[j]);
+		}
+	int q = 0;
+	int  z = eigpe;
+	int x = fourpe;
+	
+	for (int i = n; q < z; i--)
+	{
+		if (po[i].guake)
+			eigpe--;
+		q++;
+	}
+	q = 0;
+    for (int i = n-z; q < x; i--)
+	{
+		if (po[i].guake)
+			fourpe--;
+		q++;
+	}
+	
+	cout << 800 * eigpe + 400 * fourpe;
+}

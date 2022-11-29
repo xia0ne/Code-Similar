@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+	char a[8][9],b[8][9];
+	int y,o,t=0;
+	for(int u=0;u<8;u++){
+		for(int i=0;i<=8;i++){
+		a[u][i]=getchar();
+		}
+	}
+	for(y=0;y<8;y++){
+		for(o=0;o<=8;o++){
+		b[y][o]=getchar();
+			if(b[y][o]!=a[y][o]){
+		     t=1;
+		     break;
+		 }
+		}
+	}
+	if(t==1) printf("YES");
+	else printf("NO");
+	return 0;
+}

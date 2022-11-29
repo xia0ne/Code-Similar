@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int cnt;
+char a[10][10],b[10][10];
+int main(void)
+{
+	for(int i=0;i<8;i++){
+		for(int j=0;j<8;j++)
+			cin>>a[i][j];
+	}
+	for(int i=0;i<8;i++){
+		for(int j=0;j<8;j++)
+			cin>>b[i][j];
+	}
+	for(int i=0;i<8;i++){
+		for(int j=0;j<8;j++){
+			if(a[i][j]!=b[i][j]) cnt=1;
+		}
+	}
+	if(cnt==1) cout<<"YES"<<endl;
+	else cout<<"NO"<<endl;
+	return 0;
+}

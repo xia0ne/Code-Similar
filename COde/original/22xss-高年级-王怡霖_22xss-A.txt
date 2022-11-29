@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+const int maxn=200005,inf=0x3f3f3f3f;
+int m,n;
+int main(){
+	cin>>n;
+	if(n==1){
+		int sum=0;
+		for(int i=1;i<100;++i){
+			int x=i;
+			while(x){
+				if(x%10==6) sum++;
+				x/=10;
+			}
+		}
+		cout<<sum;
+	}else if(n==2){
+		cout<<7;
+	}else if(n==3){
+		cout<<6;
+	}else if(n==4){
+		cout<<3;
+	}else if(n==5){
+		cout<<41;
+	}else if(n==6){
+		cout<<"I love ACM!";
+	}
+	return 0;
+}

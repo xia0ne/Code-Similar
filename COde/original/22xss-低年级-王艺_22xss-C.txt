@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{    char a[16][8],b[8][9],c[8][9];
+     int i,j,t=0;
+     for(i=0;i<16;i++)
+        gets(a[i]);
+     for(i=0;i<8;i++)
+	  { for(j=0;j<8;j++)
+	      { c[i][j]=a[i][j];    
+	        b[i][j]=a[i+8][j];
+	      }
+		 b[i][j]='\0';
+		 c[i][j]='\0';
+	 }   
+    for(i=0;i<8;i++)  
+	  if(strcmp(b[i],c[i])==0)
+	       t++;
+	  else break;     
+     if(t==8)
+	      printf("NO\n");
+     else printf("YES\n");
+     return 0;
+}

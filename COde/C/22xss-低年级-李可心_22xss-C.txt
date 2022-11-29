@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+	bool flag=1;
+string s[9],t[9];
+for(int i=1;i<=8;i++)
+cin>>s[i];
+for(int i=1;i<=8;i++)
+cin>>t[i];
+for(int i=1;i<=8;i++)
+if(s[i]!=t[i])flag=0;
+if(flag)cout<<"NO";
+else cout<<"YES";
+return 0;
+}

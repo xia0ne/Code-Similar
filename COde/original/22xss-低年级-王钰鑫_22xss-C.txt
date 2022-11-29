@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	char a[8][8],b[8][8];
+	int i,j,m1,m2,n=0;
+	for(i=0;i<8;i++)
+		scanf("%s",a[i]);
+	for(j=0;j<8;j++)
+		scanf("%s",b[j]);
+	for(m1=0;m1<8;m1++)
+		for(m2=0;m2<8;m2++)
+			if(a[m1][m2]!=b[m1][m2])
+			{
+				n=1;
+				break;
+			}
+	if(n==1)
+		printf("YES\n");
+	else
+		printf("NO\n");
+	return 0;
+
+
+}

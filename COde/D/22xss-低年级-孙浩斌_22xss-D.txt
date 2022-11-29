@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cstdio>
+#include<cstdlib>
+#include<string>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+#define ll long long
+struct tongue{
+    int num;
+    string nam;
+}stu[1007];
+bool cmp(tongue &a,tongue &b){
+    if(a.num==b.num)
+        return a.nam<b.nam;
+    return a.num>b.num;
+}
+int main(){
+    int n;
+    scanf("%d",&n);
+    int a,b;
+    for(int i=1;i<=n;i++){
+        cin>>stu[i].nam>>a>>b;
+        stu[i].num=a*10+b;
+    }
+    sort(stu+1,stu+1+n,cmp);
+    for(int i=1;i<=n;i++){
+        cout<<stu[i].nam<<" "<<stu[i].num<<endl;
+    }
+    return 0;
+}

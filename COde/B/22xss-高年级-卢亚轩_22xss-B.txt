@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string> 
+using namespace std;
+int main(){
+	int i = 0;
+	int j = 0;
+	string s1;
+	string s2;
+	cin>>s1;
+	cin>>s2;
+	if(s2.length()<s1.length()){
+		printf("No");
+	}
+	else{
+		for(i = 0;i<s1.length();i++){
+			for(j = 0;j<s2.length();j++){
+				if(s2[j]==s1[i]) {
+					s2[j] = 0;
+					break;
+				}
+			}
+			if(j == s2.length()) {
+				break;
+			}
+		}
+ 
+			if(i!=s1.length()){
+				printf("No");
+		}
+		else
+			printf("Yes");	
+	}
+	
+	return 0;
+	
+}

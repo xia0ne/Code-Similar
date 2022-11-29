@@ -1,0 +1,42 @@
+#include<iostream>
+#include<cstdio>
+#include<cmath>
+#include<algorithm>
+#include<string.h>
+#include<map>
+#include<vector>
+#include<stack>
+#include<queue>
+#include<iomanip>
+#include<time.h>
+
+using namespace std;
+
+
+int main(void) 
+{
+	string nsp , let ;
+	cin >> let >> nsp;
+	int lenl = let.length();
+	int lenn = nsp.length();
+	bool flag[110]; //shows if this letter already used
+	memset(flag , 0 , sizeof(flag));
+	for(int i = 0 ; i < lenl ; i++)
+	{
+		for(int j = 0 ; j < lenn ; j++)
+		{
+		    if(let[i] == nsp[j] && flag[j] == 0) //this letter can bu found & it's unused
+			{
+				flag[j] = 1;
+				break;	
+			}
+			if(j == lenn-1)
+			{
+				cout << "No";
+				return 0;
+			}
+		}
+	}
+	cout << "Yes";
+	return 0;
+}

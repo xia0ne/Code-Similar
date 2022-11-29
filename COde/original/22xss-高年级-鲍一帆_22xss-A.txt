@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+/**ans1 = 20;
+ans2= 7;
+ans3 = 6;
+ans4 = 3;
+ans5 = 41;
+ans6 = I love ACM!;
+*/
+
+
+int main()
+{
+    int t;
+    cin >> t;
+    if(t == 1) cout << 20;
+    if(t == 2) cout << 7;
+    if(t == 3) cout << 6;
+    if(t == 4) cout << 3;
+    if(t == 5) cout << 41;
+    if(t == 6) cout << "I love ACM!";
+    return 0;
+}

@@ -1,0 +1,67 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n,a,b;
+	string name;
+	cin>>n;
+	string ans1[n];
+	int ans2[n];
+	string tem1[]={"0"};
+	int tem2[]={0};
+	for(int i=0;i<n;i++)
+	{
+		cin>>name>>a>>b;
+		ans1[i]=name;
+		ans2[i]=10*a+b;
+	}
+	for(int i=0;i<n-1;i++)
+	{
+		for(int i2=0;i2<n-1;i2++)
+		{
+			if(ans2[i2]<ans2[i2+1])
+			{
+				tem2[0]=ans2[i2];
+				ans2[i2]=ans2[i2+1];
+				ans2[i2+1]=tem2[0];
+				tem1[0]=ans1[i2];
+				ans1[i2]=ans1[i2+1];
+				ans1[i2+1]=tem1[0];
+			}
+			else if(ans2[i2]==ans2[i2+1])//相同时进行字典排序 
+			{
+				string a1,b1;
+				a1=ans1[i2];
+				b1=ans1[i2+1]; 
+			    for(int p=0;p<100;p++)
+				{
+					a1[p]=(int)a1[p];
+					b1[p]=(int)b1[p];
+					if(a1[p]>b1[p])
+			    	{
+				    	tem2[0]=ans2[i2];
+			         	ans2[i2]=ans2[i2+1];
+		           		ans2[i2+1]=tem2[0];
+		         		tem1[0]=ans1[i2];
+		        		ans1[i2]=ans1[i2+1];
+		     	    	ans1[i2+1]=tem1[0];
+		    	    	break;
+		    		}
+		    		else if(a1[p]==b1[p])
+		    		{
+		    			continue;
+					}
+					else
+					{
+						break;
+					}
+				}
+			}
+		}
+	}
+	for(int i=0;i<n;i++)
+	{
+		cout<<ans1[i]<<" "<<ans2[i]<<endl;
+	}
+	return 0;
+}

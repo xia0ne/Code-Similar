@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+  char a[16][8];
+  for(int i=0;i<16;i++){
+    for(int j=0;j<8;j++){
+    cin>>a[i][j];
+    }
+  }
+  bool t=true;
+  for(int i=0;i<8;i++){
+    for(int j=0;j<8;j++){
+    if(a[i][j]!=a[i+8][j]&&t){
+    t=false;
+      break;
+    }
+    }
+  }
+  if(t){
+  cout<<"NO"<<endl;
+  }else{
+  cout<<"YES"<<endl;
+  }
+  return 0;
+}

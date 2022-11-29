@@ -1,0 +1,46 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main(){
+	string a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p;
+	cin>>a>>b>>c>>d>>e>>f>>g>>h>>i>>j>>k>>l>>m>>n>>o>>p;
+	int y=0,z;
+	for(z=1;z<=8;z++){
+		if(a[z]!=i[z])
+			y=1;
+	}
+	for(z=1;z<=8;z++){
+		if(b[z]!=j[z])
+			y=1;
+	}
+	for(z=1;z<=8;z++){
+		if(c[z]!=k[z])
+			y=1;
+	}
+	for(z=1;z<=8;z++){
+		if(d[z]!=l[z])
+			y=1;
+	}
+	for(z=1;z<=8;z++){
+		if(e[z]!=m[z])
+			y=1;
+	}
+	for(z=1;z<=8;z++){
+		if(f[z]!=n[z])
+			y=1;
+	}
+	for(z=1;z<=8;z++){
+		if(g[z]!=o[z])
+			y=1;
+	}
+	for(z=1;z<=8;z++){
+		if(h[z]!=p[z])
+			y=1;
+	}
+
+	if(y==0)
+		printf("NO");
+	else
+		printf("YES");
+	return 0;
+}

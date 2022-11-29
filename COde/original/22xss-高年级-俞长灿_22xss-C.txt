@@ -1,0 +1,19 @@
+#include <iostream>
+//#include <algorithm>
+// 填上你觉得需要的其他头文件
+using namespace std;
+int main(){
+    char arr1[8][8],arr2[8][8];
+    for(int i = 0;i < 8;i++)
+        cin>>arr1[i];
+    for(int i = 0;i < 8;i++)
+        cin>>arr2[i];
+    for(int i = 0;i < 8;i++)
+        for(int j = 0;j < 8;j++)
+            if(arr1[i][j] != arr2[i][j]){
+                cout<<"YES";
+                return 0;
+            }
+    cout<<"NO";
+    return 0;
+}

@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+	char num1[9][9];
+	char num2[9][9];
+	for (int i = 0; i < 8; i++)
+	{
+		scanf("%s", &num1[i]);
+	}
+	for (int i = 0; i < 8; i++)
+	{
+		scanf("%s", &num2[i]);
+	}
+	int x = 0,a = 0;
+	for (int i = 0; i < 8; i++)
+	{
+		for (int j = 0; j < 8; j++)
+		{
+			if (num1[i][j] != num2[i][j])
+			{
+				if (a <= 0)
+				{
+					printf("YES");
+				}
+				a++;
+				break;
+			}
+			else
+			{
+				x++;
+				if (x == 64)
+				{
+					printf("NO");
+					break;
+				}
+
+			}
+
+		}
+		
+	}
+}

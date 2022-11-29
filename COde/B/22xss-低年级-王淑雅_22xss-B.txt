@@ -1,0 +1,105 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char s[100];
+	char ss[100];
+	int sss[26];
+	int ssss[26];
+	for(int i=0;i<26;i++)
+	{
+		sss[i]=0;
+		ssss[i]=0;
+	}
+	scanf("%s",&s);
+	scanf("%s",&ss);
+	int t=strlen(s);
+	int tt=strlen(ss);
+	for(int i=0;i<t;i++)
+	{
+		switch(s[i])
+		{
+		case 'a':sss[0]++;break;
+		case 'b':sss[1]++;break;
+		case 'c':sss[2]++;break;
+		case 'd':sss[3]++;break;
+		case 'e':sss[4]++;break;
+		case 'f':sss[5]++;break;
+		case 'g':sss[6]++;break;
+		case 'h':sss[7]++;break;
+		case 'i':sss[8]++;break;
+		case 'j':sss[9]++;break;
+		case 'k':sss[10]++;break;
+		case 'l':sss[11]++;break;
+		case 'm':sss[12]++;break;
+		case 'n':sss[13]++;break;
+		case 'o':sss[14]++;break;
+		case 'p':sss[15]++;break;
+		case 'q':sss[16]++;break;
+		case 'r':sss[17]++;break;
+		case 's':sss[18]++;break;
+		case 't':sss[19]++;break;
+		case 'u':sss[20]++;break;
+		case 'v':sss[21]++;break;
+		case 'w':sss[22]++;break;
+		case 'x':sss[23]++;break;
+		case 'y':sss[24]++;break;
+		case 'z':sss[25]++;break;	
+		}
+	
+	}
+	for(int i=0;i<tt;i++)
+	{
+		switch(ss[i])
+		{
+			case 'a':ssss[0]++;break;
+		case 'b':ssss[1]++;break;
+		case 'c':ssss[2]++;break;
+		case 'd':ssss[3]++;break;
+		case 'e':ssss[4]++;break;
+		case 'f':ssss[5]++;break;
+		case 'g':ssss[6]++;break;
+		case 'h':ssss[7]++;break;
+		case 'i':ssss[8]++;break;
+		case 'j':ssss[9]++;break;
+		case 'k':ssss[10]++;break;
+		case 'l':ssss[11]++;break;
+		case 'm':ssss[12]++;break;
+		case 'n':ssss[13]++;break;
+		case 'o':ssss[14]++;break;
+		case 'p':ssss[15]++;break;
+		case 'q':ssss[16]++;break;
+		case 'r':ssss[17]++;break;
+		case 's':ssss[18]++;break;
+		case 't':ssss[19]++;break;
+		case 'u':ssss[20]++;break;
+		case 'v':ssss[21]++;break;
+		case 'w':ssss[22]++;break;
+		case 'x':ssss[23]++;break;
+		case 'y':ssss[24]++;break;
+		case 'z':ssss[25]++;break;
+		}
+			
+	}
+	int real=1;
+	for(int i=0;i<26;i++)
+	{
+		if(sss[i]>ssss[i])
+		{
+			real=0;
+			break;
+		}
+	}
+	
+	if(real==1)
+	{
+		printf("Yes");
+	}
+	else
+	{
+		printf("No");
+	}
+	return 0;
+	
+	
+}

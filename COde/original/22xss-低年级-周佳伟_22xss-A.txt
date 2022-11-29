@@ -1,0 +1,42 @@
+#include<stdio.h>
+int main()
+{
+int n,i,a=0,b,c,d,e;
+scanf("%d",&n);
+if (n==1)
+{
+for(i=1;i<=100;i++)
+{
+if(i%10==6)
+a=a+1;
+if(i/10==6)
+a=a+1;
+}
+printf("%d\n",a);
+}
+else if(n==2)
+{
+b=7;
+printf("%d\n",b);
+}
+else if(n==3)
+{
+c=6;
+printf("%d\n",c);
+}
+else if(n==4)
+{
+d=3;
+printf("%d\n",d);
+}
+else if(n==5)
+{
+e=41;
+printf("%d\n",e);
+}
+else if(n==6)
+{
+printf("I love ACM!\n");
+}
+return 0;
+}

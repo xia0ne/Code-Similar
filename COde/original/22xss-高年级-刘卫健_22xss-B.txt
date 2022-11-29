@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+int j[26];
+char a[105];
+inline int read(){
+int x=0,f=1;
+char ch=getchar();
+while(ch<'0'||ch>'9'){if(ch=='-')f=-1;ch=getchar();}
+while(ch>='0'&&ch<='9'){x=(x<<1)+(x<<3)+(ch^48);ch=getchar();}
+return x*f;
+}
+
+int main(){
+	char c;
+	int index,i=0;
+	bool flag = true;
+	c = getchar();
+	while(c<='z'&&c>='a'){
+		a[i++]=c;
+		c = getchar();
+	}
+	int length = i;
+	c=getchar();
+	while(c<='z'&&c>='a'){
+		index = c-97;
+		j[index]++;
+		c = getchar();
+	}
+	for(i=0;i<length;i++){
+		index = a[i]-97;
+		j[index]--;
+		if(j[index]<0){
+			flag = false;
+			break;
+		}
+		
+	}
+	if(flag)cout<<"Yes";
+	else cout<<"No";
+
+}

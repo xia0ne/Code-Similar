@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+	int a[8], b[8];
+	int i, d = 0;
+	char w[] = "YES", v[] = "NO";
+	for (i = 0; i <= 7; i++)
+	{
+		scanf("%d", &a[i]);
+	}
+	for (i = 0; i <= 7; i++)
+	{
+		scanf("%d", &b[i]);
+		if (a[i] != b[i])
+		{
+			d++;
+		}
+	}
+	if (d > 0)
+		printf("%s\n", w);
+	else
+		printf("%s\n", v);
+	return 0;
+}
